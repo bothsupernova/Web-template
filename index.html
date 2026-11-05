@@ -1,14 +1,378 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TP101 | Massage & Spa</title><style>
-:root{--gold:#bc9465;--ink:#20211f;--paper:#f7f5f1}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}header{background:#191b19;color:white;padding:20px 7%;display:flex;align-items:center;justify-content:space-between}.logo{font:32px Georgia;letter-spacing:3px}.logo small{display:block;font:9px Arial;letter-spacing:4px}nav{display:flex;gap:30px;align-items:center}nav a{font-size:14px;color:#dad8d2}.btn{display:inline-block;background:var(--gold);border:1px solid var(--gold);color:#171814;padding:15px 26px;font-size:12px;font-weight:bold;letter-spacing:2px}.outline{background:transparent;border-color:#aaa;color:white}.hero{min-height:680px;height:78vh;max-height:900px;position:relative;display:flex;align-items:center;color:white;background:#45443a url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2400&q=85') center/cover}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,20,16,.78),rgba(15,20,16,.12)),linear-gradient(0deg,rgba(0,0,0,.3),transparent)}.hero-content{position:relative;padding:70px 8%;max-width:950px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#987449;font-weight:bold}.hero .eyebrow{color:#e0c5a0}h1{font:normal clamp(52px,6vw,92px)/1.08 Georgia;margin:24px 0}h1 em{font-weight:normal;color:#e1c4a0}h2{font:normal clamp(34px,4vw,52px)/1.2 Georgia;margin:15px 0 22px}h3{font:normal 28px Georgia}.hero p{max-width:440px;color:#e4e3dd;margin-bottom:30px}.actions{display:flex;gap:15px;flex-wrap:wrap}.hero-caption{position:absolute;right:7%;bottom:28px;letter-spacing:3px;font-size:10px}.tabs{position:sticky;top:0;z-index:2;background:#fff;display:flex;justify-content:center;gap:45px;padding:22px;border-bottom:1px solid #e4e0d8}.tabs a{font-size:14px}.tabs a:hover{color:#977347}section{padding:85px 8%;scroll-margin-top:20px}.intro{display:grid;grid-template-columns:1fr 1fr;gap:12%;align-items:center}.muted{color:#73756d}.intro p{max-width:480px}.rule{height:1px;background:#d9d0c3;margin:30px 0}.treatments{background:#ede9e1}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.card img{width:100%;height:270px;object-fit:cover}.card h3{margin:20px 0 8px}.card p{color:#71736b;font-size:14px}.card button{border:0;background:none;padding:12px 0;color:#8c693f;border-bottom:1px solid #bba17e;font-size:13px}.pricing{display:grid;grid-template-columns:1fr 1.3fr;gap:12%}.price-row{display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid #ddd6cb}.price-row span:last-child{color:#80633f}.membership{background:#253129;color:white;display:grid;grid-template-columns:1fr 1fr;gap:10%}.membership .eyebrow{color:#cfb48d}.membership p{color:#cbd1c8}.membership .btn{margin-top:20px}.gift{background:#e4d6c3;display:flex;align-items:center;justify-content:space-between;gap:35px}.visit-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:50px}.visit-grid>div+div{border-left:1px solid #ddd5ca;padding-left:40px}.hours div{display:flex;justify-content:space-between;font-size:13px;border-bottom:1px solid #e2ddd4;padding:10px 0}.location-placeholder{margin-top:50px;padding:45px;background:#e9e6dd;text-align:center;border:1px solid #dbd4c8}.location-placeholder h3{margin:0}footer{background:#191b19;color:#d4d4cd;padding:40px 8%;display:flex;justify-content:space-between;align-items:center;font-size:12px}.draft{font-size:11px;color:#8c887f;margin-top:18px}dialog{border:0;padding:45px;max-width:500px;width:90%;background:var(--paper)}dialog::backdrop{background:#0009}dialog h2{font-size:35px}dialog button{margin-top:15px}.close{position:absolute;right:15px;top:0;background:none;border:0;font-size:24px}.menu{display:none} @media(max-width:750px){header{padding:18px 6%}header nav{display:none;position:absolute;top:85px;left:0;right:0;padding:25px;background:#191b19;z-index:5;flex-direction:column}header nav.open{display:flex}.menu{display:block;background:none;border:1px solid #777;color:white;padding:5px 12px}.hero{min-height:620px;height:auto}.hero-content{padding:70px 7%}.tabs{gap:24px;justify-content:flex-start;overflow:auto;padding:18px 7%;white-space:nowrap}.intro,.pricing,.membership,.visit-grid{grid-template-columns:1fr;gap:25px}.cards{grid-template-columns:1fr}.card img{height:320px}section{padding:60px 7%}.section-head,.gift{display:block}.visit-grid>div+div{border-left:0;padding:20px 0 0;border-top:1px solid #ddd5ca}.hero-caption{display:none}footer{gap:25px;align-items:start;flex-direction:column}}
-</style><header><a class="logo" href="#">TP101<small>MASSAGE & SPA</small></a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">Menu</button><nav><a href="#story">Our Story</a><a href="#treatments">Treatments</a><a href="#membership">Membership</a><a href="#gifts">Gift Cards</a><a href="#visit">Visit Us</a><button class="btn" data-dialog="booking">Book Now</button></nav></header>
-<main><div class="hero"><div class="hero-content"><div class="eyebrow">A little stillness. A little you.</div><h1>Your time to<br><em>feel restored.</em></h1><p>Step away from the everyday. Discover thoughtful massage rituals and a quieter kind of care at TP101.</p><div class="actions"><button class="btn" data-dialog="booking">Book an appointment</button><a class="btn outline" href="#treatments">Explore treatments</a></div></div><div class="hero-caption">BREATHE IN. LET GO. BEGIN AGAIN.</div></div>
-<div class="tabs"><a href="#story">Overview</a><a href="#treatments">Treatments</a><a href="#pricing">Pricing</a><a href="#membership">Membership</a><a href="#gifts">Gift Cards</a><a href="#visit">Visit Us</a></div>
-<section id="story" class="intro"><div><div class="eyebrow">Welcome to TP101</div><h2>A space to slow down.<br>A moment to reconnect.</h2></div><div><p class="muted">Soft light. Warm surroundings. Time that belongs entirely to you. Our vision for TP101 is simple: make taking care of yourself feel natural.</p><p class="muted">From a gentle reset to a deeper release, find a ritual that fits the way you want to feel.</p><div class="rule"></div><span class="eyebrow">Personal care · Unhurried moments</span></div></section>
-<section id="treatments" class="treatments"><div class="section-head"><div><div class="eyebrow">The treatment collection</div><h2>Find your kind of calm.</h2></div><p class="muted">Sample menu · customizable for your spa</p></div><div class="cards"><article class="card"><img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=85" alt="Relaxing massage treatment" loading="lazy"><h3>Signature Relaxation</h3><p>A gentle, flowing massage for a peaceful pause and a full-body reset.</p><button data-dialog="relaxation">Explore ritual &nbsp; ↗</button></article><article class="card"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=85" alt="Spa massage ritual" loading="lazy"><h3>Deep Tissue</h3><p>Focused pressure and attentive care, tailored to your comfort.</p><button data-dialog="deep">Explore ritual &nbsp; ↗</button></article><article class="card"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85" alt="Warm spa interior" loading="lazy"><h3>Time for Two</h3><p>Share a quiet escape with side-by-side treatments and space to unwind.</p><button data-dialog="couples">Explore ritual &nbsp; ↗</button></article></div></section>
-<section id="pricing" class="pricing"><div><div class="eyebrow">Simple moments of care</div><h2>Make room<br>for yourself.</h2><p class="muted">Choose your ritual. Take your time.</p><p class="draft">Illustrative services and durations. Final prices to be added.</p></div><div><div class="price-row"><span>Signature Relaxation · 60 min</span><span>Price coming soon</span></div><div class="price-row"><span>Deep Tissue · 60 min</span><span>Price coming soon</span></div><div class="price-row"><span>Extended Ritual · 90 min</span><span>Price coming soon</span></div><div class="price-row"><span>Time for Two · 60 min</span><span>Price coming soon</span></div></div></section>
-<section id="membership" class="membership"><div><div class="eyebrow">A ritual worth returning to</div><h2>Wellness, woven<br>into your everyday.</h2></div><div><p>Imagine a little time for yourself, every month. Our membership concept makes regular relaxation part of your routine.</p><p>Membership details and benefits will be announced when the spa launches.</p><button class="btn" data-dialog="membership">Discover membership</button></div></section>
-<section id="gifts" class="gift"><div><div class="eyebrow">Thoughtfully given. Beautifully received.</div><h2>Give a moment of calm.</h2><p>A future favorite gift, for someone who deserves a pause.</p></div><button class="btn" data-dialog="gifts">Explore gift cards ↗</button></section>
-<section id="visit"><div class="visit-grid"><div><div class="eyebrow">Visit us</div><h3>Your next quiet escape.</h3><p class="muted">Spa address to be added.<br>City, state & postal code</p><p class="muted">Location and arrival information will appear here once confirmed.</p></div><div><div class="eyebrow">Hours</div><h3>Time for your wellbeing.</h3><div class="hours"><div><span>Monday – Friday</span><span>To be confirmed</span></div><div><span>Saturday</span><span>To be confirmed</span></div><div><span>Sunday</span><span>To be confirmed</span></div></div></div><div><div class="eyebrow">Connect</div><h3>We look forward<br>to welcoming you.</h3><p class="muted">Phone & email coming soon</p><button class="btn" data-dialog="booking">Plan your visit</button></div></div><div class="location-placeholder"><div class="eyebrow">Find your moment of calm</div><h3>TP101 Massage & Spa</h3><p class="muted">Your location map will appear here when an address is added.</p></div></section></main><footer><a class="logo" href="#">TP101<small>MASSAGE & SPA</small></a><span>Design preview · Sample content · Booking not yet available</span><span>© TP101</span></footer>
-<dialog><button class="close" aria-label="Close dialog">×</button><div class="eyebrow">TP101 · Preview</div><h2 id="dialog-title"></h2><p id="dialog-copy" class="muted"></p><button class="btn" id="done">Back to exploring</button></dialog><script>
-const content={booking:['Your moment is coming.','This is a design preview. Online booking will be connected once your spa’s booking provider and business details are ready. No appointment has been made.'],relaxation:['Signature Relaxation','A sample 60-minute relaxation ritual with gentle, flowing movements. Service details and pricing can be tailored to each spa.'],deep:['Deep Tissue','A sample 60-minute focused massage with pressure adjusted to personal comfort. Final services and pricing will be confirmed by the spa.'],couples:['Time for Two','A sample side-by-side massage experience for two guests. Availability and final treatment details will be confirmed before launch.'],membership:['A regular moment for you.','Membership is a proposed section of this theme. Plans, prices, and benefits have not been set yet.'],gifts:['Give the gift of stillness.','Gift card purchasing will be connected before launch. This preview does not accept payments.']};const dialog=document.querySelector('dialog');document.querySelectorAll('[data-dialog]').forEach(b=>b.onclick=()=>{const c=content[b.dataset.dialog];document.querySelector('#dialog-title').textContent=c[0];document.querySelector('#dialog-copy').textContent=c[1];dialog.showModal()});document.querySelectorAll('.close,#done').forEach(b=>b.onclick=()=>dialog.close());const menu=document.querySelector('.menu');menu.onclick=()=>{const open=document.querySelector('nav').classList.toggle('open');menu.setAttribute('aria-expanded',open)};document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>{document.querySelector('nav').classList.remove('open');menu.setAttribute('aria-expanded',false)});
-</script></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Template | Massage & Spa
+    </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        Template
+        <small>
+          MASSAGE & SPA
+        </small>
+      </a>
+      <button class="menu" aria-label="Toggle navigation" aria-expanded="false">
+        Menu
+      </button>
+      <nav>
+        <a href="#story">
+          Our Story
+        </a>
+        <a href="#treatments">
+          Treatments
+        </a>
+        <a href="#membership">
+          Membership
+        </a>
+        <a href="#gifts">
+          Gift Cards
+        </a>
+        <a href="#visit">
+          Find a Spa
+        </a>
+        <button class="btn" data-dialog="booking">
+          Book Now
+        </button>
+      </nav>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="hero-content">
+          <div class="eyebrow">
+            Massage & day spa · Your city
+          </div>
+          <h1>
+            Template Spa
+          </h1>
+          <div class="hero-divider">
+          </div>
+          <p class="hero-status">
+            <span class="status-dot">
+            </span>
+            Your neighborhood escape
+          </p>
+          <p class="hero-address">
+            Your street address · Your city
+          </p>
+          <div class="actions">
+            <button class="btn" data-dialog="booking">
+              Book an appointment
+            </button>
+            <a class="btn outline" href="#visit">
+              Contact the spa
+            </a>
+          </div>
+        </div>
+        <div class="hero-caption">
+          RELAX. RESTORE. RENEW.
+        </div>
+      </div>
+      <div class="tabs">
+        <a href="#visit">
+          Overview
+        </a>
+        <a href="#treatments">
+          Treatments
+        </a>
+        <a href="#pricing">
+          Pricing
+        </a>
+        <a href="#membership">
+          Membership
+        </a>
+        <a href="#gifts">
+          Gift Cards
+        </a>
+        <a href="#visit">
+          Visit Us
+        </a>
+      </div>
+      <section id="visit">
+        <div class="visit-grid">
+          <div>
+            <div class="eyebrow">
+              Visit us
+            </div>
+            <h3>
+              Your next quiet escape.
+            </h3>
+            <p class="muted">
+              Spa address to be added.
+              <br>
+              City, state & postal code
+            </p>
+            <p class="muted">
+              Location and arrival information will appear here once confirmed.
+            </p>
+          </div>
+          <div>
+            <div class="eyebrow">
+              Hours
+            </div>
+            <h3>
+              Time for your wellbeing.
+            </h3>
+            <div class="hours">
+              <div>
+                <span>
+                  Monday – Friday
+                </span>
+                <span>
+                  To be confirmed
+                </span>
+              </div>
+              <div>
+                <span>
+                  Saturday
+                </span>
+                <span>
+                  To be confirmed
+                </span>
+              </div>
+              <div>
+                <span>
+                  Sunday
+                </span>
+                <span>
+                  To be confirmed
+                </span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow">
+              Connect
+            </div>
+            <h3>
+              We look forward
+              <br>
+              to welcoming you.
+            </h3>
+            <p class="muted">
+              Phone & email coming soon
+            </p>
+            <button class="btn" data-dialog="booking">
+              Plan your visit
+            </button>
+          </div>
+        </div>
+        <div class="location-placeholder">
+          <div class="eyebrow">
+            Find your moment of calm
+          </div>
+          <h3>
+            Template Massage & Spa
+          </h3>
+          <p class="muted">
+            Your location map will appear here when an address is added.
+          </p>
+        </div>
+      </section>
+      <section id="story" class="intro">
+        <div>
+          <div class="eyebrow">
+            Welcome to Template
+          </div>
+          <h2>
+            A space to slow down.
+            <br>
+            A moment to reconnect.
+          </h2>
+        </div>
+        <div>
+          <p class="muted">
+            Soft light. Warm surroundings. Time that belongs entirely to you. Our vision for Template is simple: make taking care of yourself feel natural.
+          </p>
+          <p class="muted">
+            From a gentle reset to a deeper release, find a ritual that fits the way you want to feel.
+          </p>
+          <div class="rule">
+          </div>
+          <span class="eyebrow">
+            Personal care · Unhurried moments
+          </span>
+        </div>
+      </section>
+      <section id="treatments" class="treatments">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">
+              The treatment collection
+            </div>
+            <h2>
+              Find your kind of calm.
+            </h2>
+          </div>
+          <p class="muted">
+            Sample menu · customizable for your spa
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=85" alt="Relaxing massage treatment" loading="lazy">
+            <h3>
+              Signature Relaxation
+            </h3>
+            <p>
+              A gentle, flowing massage for a peaceful pause and a full-body reset.
+            </p>
+            <button data-dialog="relaxation">
+              Explore ritual &nbsp; ↗
+            </button>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=85" alt="Spa massage ritual" loading="lazy">
+            <h3>
+              Deep Tissue
+            </h3>
+            <p>
+              Focused pressure and attentive care, tailored to your comfort.
+            </p>
+            <button data-dialog="deep">
+              Explore ritual &nbsp; ↗
+            </button>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85" alt="Warm spa interior" loading="lazy">
+            <h3>
+              Time for Two
+            </h3>
+            <p>
+              Share a quiet escape with side-by-side treatments and space to unwind.
+            </p>
+            <button data-dialog="couples">
+              Explore ritual &nbsp; ↗
+            </button>
+          </article>
+        </div>
+      </section>
+      <section id="pricing" class="pricing">
+        <div>
+          <div class="eyebrow">
+            Simple moments of care
+          </div>
+          <h2>
+            Make room
+            <br>
+            for yourself.
+          </h2>
+          <p class="muted">
+            Choose your ritual. Take your time.
+          </p>
+          <p class="draft">
+            Illustrative services and durations. Final prices to be added.
+          </p>
+        </div>
+        <div>
+          <div class="price-row">
+            <span>
+              Signature Relaxation · 60 min
+            </span>
+            <span>
+              Price coming soon
+            </span>
+          </div>
+          <div class="price-row">
+            <span>
+              Deep Tissue · 60 min
+            </span>
+            <span>
+              Price coming soon
+            </span>
+          </div>
+          <div class="price-row">
+            <span>
+              Extended Ritual · 90 min
+            </span>
+            <span>
+              Price coming soon
+            </span>
+          </div>
+          <div class="price-row">
+            <span>
+              Time for Two · 60 min
+            </span>
+            <span>
+              Price coming soon
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="membership" class="membership">
+        <div>
+          <div class="eyebrow">
+            A ritual worth returning to
+          </div>
+          <h2>
+            Wellness, woven
+            <br>
+            into your everyday.
+          </h2>
+        </div>
+        <div>
+          <p>
+            Imagine a little time for yourself, every month. Our membership concept makes regular relaxation part of your routine.
+          </p>
+          <p>
+            Membership details and benefits will be announced when the spa launches.
+          </p>
+          <button class="btn" data-dialog="membership">
+            Discover membership
+          </button>
+        </div>
+      </section>
+      <section id="gifts" class="gift">
+        <div>
+          <div class="eyebrow">
+            Thoughtfully given. Beautifully received.
+          </div>
+          <h2>
+            Give a moment of calm.
+          </h2>
+          <p>
+            A future favorite gift, for someone who deserves a pause.
+          </p>
+        </div>
+        <button class="btn" data-dialog="gifts">
+          Explore gift cards ↗
+        </button>
+      </section>
+    </main>
+    <footer>
+      <a class="logo" href="#">
+        Template
+        <small>
+          MASSAGE & SPA
+        </small>
+      </a>
+      <span>
+        Design preview · Sample content · Booking not yet available
+      </span>
+      <span>
+        © Template
+      </span>
+    </footer>
+    <dialog>
+      <button class="close" aria-label="Close dialog">
+        ×
+      </button>
+      <div class="eyebrow">
+        Template · Preview
+      </div>
+      <h2 id="dialog-title">
+      </h2>
+      <p id="dialog-copy" class="muted">
+      </p>
+      <button class="btn" id="done">
+        Back to exploring
+      </button>
+    </dialog>
+    <script src="script.js" defer>
+    </script>
+  </body>
+</html>
