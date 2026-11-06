@@ -573,7 +573,18 @@ header nav a[aria-current="page"] {
 .home-details {
   position: relative;
   z-index: 1;
-  background: var(--paper);
+  color: #fffaf2;
+  background: rgba(25, 28, 24, 0.66);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.home-details .page-links {
+  background: transparent;
+}
+
+.home-details .muted {
+  color: #f3eee5;
 }
 @media (prefers-reduced-motion: no-preference) {
   .rise-into-view { animation: detail-rise .7s ease-out both; }
