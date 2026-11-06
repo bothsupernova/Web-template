@@ -2,7 +2,7 @@
 
 /* Template Spa — colors and layout can be customized here. */
 :root {
-  --spa-font: "Cormorant Garamond", var(--spa-font);
+  --spa-font: "Cormorant Garamond", Georgia, serif;
   --gold:#bc9465;
   --ink:#20211f;
   --paper:#f7f5f1;
