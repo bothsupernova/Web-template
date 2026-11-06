@@ -539,3 +539,49 @@ header nav a[aria-current="page"] {
     grid-template-columns: 1fr;
   }
 }
+
+/* The detail panel scrolls over the opening film at the visitor's own pace. */
+.motion-hero {
+  position: sticky;
+  top: 0;
+  isolation: isolate;
+  height: 88svh;
+  min-height: min(620px, 88svh);
+}
+.hero-film {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0;
+}
+.hero-film.has-frame { opacity: 1; }
+.motion-hero::before { z-index: -1; }
+.film-toggle {
+  position: absolute;
+  bottom: 18px;
+  right: 5%;
+  padding: 9px 16px;
+  background: #191b19d9;
+  color: white;
+  border: 1px solid #ffffff80;
+  border-radius: 24px;
+  font-size: 13px;
+}
+.home-details {
+  position: relative;
+  z-index: 1;
+  background: var(--paper);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rise-into-view { animation: detail-rise .7s ease-out both; }
+  @keyframes detail-rise {
+    from { opacity: .35; transform: translateY(24px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-hero { position: relative; }
+}
