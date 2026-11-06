@@ -36,8 +36,10 @@
         <a class="btn" href="booking.html">Book Now</a>
       </nav>
     </header>
-    <main>
-<div class="hero">
+    <main class="home">
+<div class="hero motion-hero">
+        <video class="hero-film" muted playsinline loop preload="none" aria-hidden="true"
+          data-src="https://videos.pexels.com/video-files/9335882/9335882-hd_1920_1080_25fps.mp4"></video>
         <div class="hero-content">
           <div class="eyebrow">
             Massage & day spa · Your city
@@ -64,13 +66,12 @@
             </a>
           </div>
         </div>
-        <div class="hero-caption">
-          RELAX. RESTORE. RENEW.
-        </div>
+        <button type="button" class="film-toggle" hidden>Play video</button>
       </div>
+      <div class="home-details">
       <section class="intro">
   <div>
-    <div class="eyebrow">Welcome to Template</div>
+    
     <h2>Your own little escape.</h2>
   </div>
   <div>
@@ -83,7 +84,8 @@
   <a href="membership.html"><h3>Membership</h3><p>Make room for regular relaxation. →</p></a>
   <a href="gift-cards.html"><h3>Gift Cards</h3><p>A thoughtful moment for someone else. →</p></a>
 </section>
-</main>
+      </div>
+    </main>
 <footer>
       <a class="logo" href="index.html" aria-current="page">
         Template
@@ -113,6 +115,7 @@
         Back to exploring
       </button>
     </dialog>
+    <script src="home-motion.js" defer></script>
     <script src="script.js" defer>
     </script>
   </body>
