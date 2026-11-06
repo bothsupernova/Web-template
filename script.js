@@ -70,12 +70,3 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
 });
 
-// Indicate the selected section in the secondary navigation.
-const sectionLinks = document.querySelectorAll('.tabs a');
-sectionLinks[0].setAttribute('aria-current', 'location');
-sectionLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    sectionLinks.forEach((item) => item.removeAttribute('aria-current'));
-    link.setAttribute('aria-current', 'location');
-  });
-});

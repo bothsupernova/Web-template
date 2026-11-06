@@ -4,6 +4,28 @@ const path = require('node:path');
 
 // Only these public files can be served. Source and configuration stay private.
 const publicFiles = new Map([
+  ['/our-story', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
+  ['/our-story/', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
+  ['/our-story.html', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
+  ['/treatments', { name: 'treatments.html', type: 'text/html; charset=utf-8' }],
+  ['/treatments/', { name: 'treatments.html', type: 'text/html; charset=utf-8' }],
+  ['/treatments.html', { name: 'treatments.html', type: 'text/html; charset=utf-8' }],
+  ['/pricing', { name: 'pricing.html', type: 'text/html; charset=utf-8' }],
+  ['/pricing/', { name: 'pricing.html', type: 'text/html; charset=utf-8' }],
+  ['/pricing.html', { name: 'pricing.html', type: 'text/html; charset=utf-8' }],
+  ['/membership', { name: 'membership.html', type: 'text/html; charset=utf-8' }],
+  ['/membership/', { name: 'membership.html', type: 'text/html; charset=utf-8' }],
+  ['/membership.html', { name: 'membership.html', type: 'text/html; charset=utf-8' }],
+  ['/gift-cards', { name: 'gift-cards.html', type: 'text/html; charset=utf-8' }],
+  ['/gift-cards/', { name: 'gift-cards.html', type: 'text/html; charset=utf-8' }],
+  ['/gift-cards.html', { name: 'gift-cards.html', type: 'text/html; charset=utf-8' }],
+  ['/visit', { name: 'visit.html', type: 'text/html; charset=utf-8' }],
+  ['/visit/', { name: 'visit.html', type: 'text/html; charset=utf-8' }],
+  ['/visit.html', { name: 'visit.html', type: 'text/html; charset=utf-8' }],
+  ['/booking', { name: 'booking.html', type: 'text/html; charset=utf-8' }],
+  ['/booking/', { name: 'booking.html', type: 'text/html; charset=utf-8' }],
+  ['/booking.html', { name: 'booking.html', type: 'text/html; charset=utf-8' }],
+
   ['/', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/index.html', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/styles.css', { name: 'styles.css', type: 'text/css; charset=utf-8' }],

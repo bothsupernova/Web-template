@@ -496,3 +496,46 @@ dialog button {
   padding-top:80px;
   padding-bottom:100px;
 }
+
+/* Dedicated pages share the same navigation, colors, and spacing. */
+header nav a[aria-current="page"] {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+.page-heading {
+  background: #e9e1d5;
+  padding: 55px 8%;
+  color: #6e5940;
+}
+.page-heading h1 {
+  color: var(--ink);
+  font-size: clamp(42px, 6vw, 76px);
+  margin-bottom: 0;
+}
+.page-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  background: #ede9e1;
+}
+.page-links a {
+  padding: 20px 0;
+  border-top: 1px solid var(--gold);
+}
+.page-cta {
+  padding-top: 35px;
+}
+.booking-content {
+  max-width: 900px;
+  min-height: 50vh;
+}
+:focus-visible {
+  outline: 3px solid #bc9465;
+  outline-offset: 5px;
+}
+@media (max-width: 750px) {
+  .page-links {
+    grid-template-columns: 1fr;
+  }
+}
