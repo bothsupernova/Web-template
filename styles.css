@@ -570,21 +570,66 @@ header nav a[aria-current="page"] {
   border-radius: 24px;
   font-size: 13px;
 }
-.home-details {
+/* Each photo stays in view while its card scrolls across it. */
+.home-scenes {
   position: relative;
   z-index: 1;
+  background: #292d26;
+}
+
+.spa-scene {
+  position: relative;
+  isolation: isolate;
+  padding: 0;
+  --photo-height: 100svh;
+}
+
+.scene-photo {
+  position: sticky;
+  top: 0;
+  height: var(--photo-height);
+}
+
+.scene-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.scene-content {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 135svh;
+  margin-top: calc(-1 * var(--photo-height));
+  padding: 20svh 9vw 13svh;
+}
+
+.scene-card {
+  max-width: 420px;
+  padding: clamp(28px, 4vw, 60px);
+  border-radius: 2px 30px 2px 2px;
   color: #fffaf2;
-  background: rgba(25, 28, 24, 0.66);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
+  background: rgba(27, 31, 24, .76);
 }
 
-.home-details .page-links {
-  background: transparent;
+.scene-card .eyebrow {
+  color: #e7cba4;
 }
 
-.home-details .muted {
-  color: #f3eee5;
+.scene-card .btn {
+  margin-top: 12px;
+}
+
+@media (max-width: 750px) {
+  .scene-content { padding-inline: 6vw; }
+  .scene-card { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-photo { position: relative; }
+  .scene-content { min-height: var(--photo-height); }
 }
 @media (prefers-reduced-motion: no-preference) {
   .rise-into-view { animation: detail-rise .7s ease-out both; }
