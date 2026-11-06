@@ -633,20 +633,22 @@ header nav a[aria-current="page"] {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  width: min(100%, 18rem);
+  width: min(100%, 24.75rem);
   margin: 18px auto 10px;
 }
 .offer-rate {
   display: grid;
-  gap: 2px;
+  align-content: center;
+  aspect-ratio: 1.23;
+  gap: 4px;
   line-height: 1.2;
   padding: 10px 6px;
   border: 1px solid rgb(227 201 167 / 40%);
   border-radius: 10px;
   background: rgb(109 85 54 / 86%);
 }
-.offer-rate strong { font: normal clamp(24px, 3vw, 30px) var(--spa-font); }
-.offer-rate span { font-size: 13px; }
+.offer-rate strong { font: normal clamp(25px, 3vw, 42px)/1.08 var(--spa-font); }
+.offer-rate span { font-size: clamp(14px, 1.25vw, 17px); }
 .first-visit .btn { border-radius: 30px; letter-spacing: 1px; }
 
 .scene-card .eyebrow {
