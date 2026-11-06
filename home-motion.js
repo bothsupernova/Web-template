@@ -37,6 +37,6 @@ if ('IntersectionObserver' in window) {
       observer.unobserve(entry.target);
     }
   });
-  document.querySelectorAll('.home-details .intro > div, .home-details .page-links a')
+  document.querySelectorAll('.scene-card')
     .forEach((detail) => observer.observe(detail));
 }
