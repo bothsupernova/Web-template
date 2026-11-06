@@ -37,26 +37,19 @@
       </nav>
     </header>
     <main>
-<section class="page-heading">
-  <a href="index.html">Home</a> / Gift Cards
-  <h1>Gift Cards</h1>
-</section><section id="gifts" class="gift">
-        <div>
-          <div class="eyebrow">
-            Thoughtfully given. Beautifully received.
-          </div>
-          <h2>
-            Give a moment of calm.
-          </h2>
-          <p>
-            A future favorite gift, for someone who deserves a pause.
-          </p>
-        </div>
-        <button class="btn" data-dialog="gifts">
-          Explore gift cards ↗
-        </button>
-      </section>
-</main>
+<section class="gift-intro"><p class="eyebrow">Template · Gift Cards</p><h1>Give a moment<br>of relaxation.</h1><p>Choose a massage for someone special. Collect your physical gift card at the spa.</p><a class="btn" href="#gift-menu">Choose a massage</a></section>
+<section id="gift-menu"><p class="eyebrow">Collect at the spa</p><h2>Choose their treatment</h2>
+<form action="booking.html" method="get" class="gift-selection">
+<label for="gift-treatment">Massage</label>
+<select id="gift-treatment" name="gift-treatment" required>
+<option value="">Select a massage</option>
+<option>Signature Relaxation</option><option>Deep Tissue</option><option>Time for Two</option></select>
+<label for="gift-duration">Duration</label><select id="gift-duration" name="gift-duration" required><option value="">Select duration</option><option value="60">60 minutes</option><option value="90">90 minutes</option></select>
+<input type="hidden" name="collection" value="in-store">
+<p><strong>Pickup at Template Spa</strong><br>Contact the spa to confirm availability, pricing, payment, and collection time.</p>
+<p>The booking connection is coming soon. This preview lets you choose a treatment to discuss with the spa.</p>
+<button class="btn" type="submit">Continue to booking information</button>
+</form></section></main>
 <footer>
       <a class="logo" href="index.html">
         Template

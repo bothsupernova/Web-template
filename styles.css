@@ -728,3 +728,22 @@ header nav a[aria-current="page"] {
   .guide-photo { height: 280px; }
   .guide-members .guide-photo { grid-row: 1; }
 }
+
+/* Gift cards are selected by treatment and collected in store. */
+.gift-intro { background: linear-gradient(120deg, #1c231d, #4c4939); color: #fffaf2; }
+.gift-intro .eyebrow { color: #e7cba4; }
+.gift-intro p { max-width: 40ch; }
+.gift-selection { display: grid; gap: 14px; max-width: 600px; }
+.gift-selection label { font-weight: 600; font-size: 22px; }
+.gift-selection select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  background: white;
+  color: var(--ink);
+  border: 1px solid #b8a78e;
+  border-radius: 4px;
+  font: inherit;
+}
+.gift-selection p { margin: 8px 0; }
+.gift-selection .btn { justify-self: start; }
