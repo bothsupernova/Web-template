@@ -763,3 +763,37 @@ header nav a[aria-current="page"] {
 }
 .treatment-menu-card h3 { margin-block: 12px 4px; }
 .treatment-menu-card p { margin-top: 0; }
+
+.spa-menu-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1.12;
+  object-fit: cover;
+  background: #e9e3d8;
+}
+.journey-steps .spa-menu-photo { aspect-ratio: 1.55; }
+.journey-steps article:has(.spa-menu-photo) { border-top: 0; }
+.white-lotus-membership {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(24px, 6vw, 96px);
+  background: #f5f2eb;
+}
+.white-lotus-membership > img { border-radius: 5px; }
+.lotus-member-copy dl { margin-block: 24px; }
+.lotus-member-copy dl div { border-top: 1px solid #c9c2b3; padding-block: 14px; }
+.lotus-member-copy dt { font-size: 1.5rem; font-weight: 600; }
+.lotus-member-copy dd { margin: 4px 0 0; }
+.lotus-gift-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(20px, 5vw, 72px);
+  background: #46543d;
+}
+.lotus-gift-banner .spa-menu-photo { aspect-ratio: 1.65; }
+@media (max-width: 750px) {
+  .white-lotus-membership, .lotus-gift-banner { grid-template-columns: 1fr; }
+}
