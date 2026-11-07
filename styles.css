@@ -5,7 +5,7 @@
   --spa-font: "Cormorant Garamond", Georgia, serif;
   --gold:#bc9465;
   --ink:#282b22;
-  --paper:#f8f5ed;
+  --paper:#f2ede2;
   --olive: #576643;
   --olive-dark: #3d4a31;
   --linen: #eee9dd;
@@ -164,7 +164,7 @@ h3 {
   position:sticky;
   top:0;
   z-index:2;
-  background:#fff;
+  background: var(--paper);
   display:flex;
   justify-content:center;
   gap:45px;
@@ -742,7 +742,7 @@ header nav a[aria-current="page"] {
   width: 100%;
   min-height: 48px;
   padding: 10px 14px;
-  background: white;
+  background: var(--paper);
   color: var(--ink);
   border: 1px solid #b8a78e;
   border-radius: 4px;
