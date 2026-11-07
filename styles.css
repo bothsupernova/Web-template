@@ -4,8 +4,11 @@
 :root {
   --spa-font: "Cormorant Garamond", Georgia, serif;
   --gold:#bc9465;
-  --ink:#20211f;
-  --paper:#f7f5f1;
+  --ink:#282b22;
+  --paper:#f8f5ed;
+  --olive: #576643;
+  --olive-dark: #3d4a31;
+  --linen: #eee9dd;
 }
 
 * {
@@ -796,4 +799,34 @@ header nav a[aria-current="page"] {
 .lotus-gift-banner .spa-menu-photo { aspect-ratio: 1.65; }
 @media (max-width: 750px) {
   .white-lotus-membership, .lotus-gift-banner { grid-template-columns: 1fr; }
+}
+
+/* Warm linen and olive are shared across the White Lotus pages. */
+header, footer { background: var(--paper); color: var(--ink); }
+header { border-bottom: 1px solid #ded7c8; }
+footer { border-top: 1px solid #ded7c8; }
+header .logo, footer .logo { color: var(--olive-dark); }
+header nav a { color: var(--ink); }
+header nav a[aria-current="page"] { color: var(--olive-dark); }
+.btn { background: var(--olive); border-color: var(--olive); color: white; }
+.btn:hover { background: var(--olive-dark); color: white; }
+.btn.outline { background: transparent; border-color: #fffaf2; color: #fffaf2; }
+.btn.outline:hover { background: var(--olive-dark); }
+.page-heading, .treatments, .white-lotus-membership { background: var(--linen); }
+.page-heading h1, .guide-heading h2, .lotus-member-copy h2 { color: var(--olive-dark); }
+.eyebrow { color: var(--olive-dark); }
+.hero .eyebrow, .scene-card .eyebrow, .membership .eyebrow, .gift-intro .eyebrow {
+  color: #f0dfbc;
+}
+.lotus-gift-banner { background: #586448; }
+.treatment-menu-card, .journey-steps article { background: var(--linen); }
+.treatment-menu-card h3, .treatment-menu-card p,
+.journey-steps article h3, .journey-steps article p, .journey-steps article .guide-link {
+  margin-inline: 16px;
+}
+.journey-steps article { padding-bottom: 16px; }
+.spa-menu-photo[src="white-lotus-massage.jpg"] { object-position: 48% center; }
+@media (max-width: 750px) {
+  header nav { background: var(--paper); }
+  .menu { color: var(--olive-dark); border-color: var(--olive); }
 }

@@ -28,6 +28,7 @@ const publicFiles = new Map([
 
   ['/', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/index.html', { name: 'index.html', type: 'text/html; charset=utf-8' }],
+  ['/white-lotus-massage.jpg', { name: 'white-lotus-massage.jpg', type: 'image/jpeg' }],
   ['/styles.css', { name: 'styles.css', type: 'text/css; charset=utf-8' }],
   ['/home-motion.js', { name: 'home-motion.js', type: 'text/javascript; charset=utf-8' }],
   ['/script.js', { name: 'script.js', type: 'text/javascript; charset=utf-8' }],
