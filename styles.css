@@ -842,15 +842,6 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .treatment-hero .eyebrow { color: #f0dfbc; margin-top: 32px; }
 .treatment-hero h1 { margin: 0; }
 .treatment-intro { max-width: 52ch; border-top: 1px solid #e2c99d; padding-top: 18px; }
-.treatment-nav {
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px clamp(12px, 4vw, 48px);
-  padding: 16px 6%;
-  border-bottom: 1px solid #ded7c8;
-}
-.treatment-nav a { color: var(--ink); }
-.treatment-nav a[aria-current="page"] { color: var(--olive-dark); text-decoration: underline; }
 .treatment-service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
