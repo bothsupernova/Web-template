@@ -37,10 +37,20 @@
       </nav>
     </header>
     <main>
-<section class="page-heading">
-  <a href="index.html">Home</a> / Treatments
-  <h1>Treatments</h1>
-</section><section aria-labelledby="treatment-menu">
+<section class="treatment-hero">
+      <a href="index.html">← White Lotus Day Spa</a>
+      <p class="eyebrow">The spa menu</p>
+      <h1>Treatments at<br>White Lotus Day Spa</h1>
+      <p class="treatment-intro">A tranquil retreat in Emerson, New Jersey. Explore therapeutic massage, rejuvenating facials, and wellness treatments designed to restore balance and renew your natural glow.</p>
+    </section>
+    <nav class="treatment-nav" aria-label="Spa pages">
+      <a href="index.html">Overview</a>
+      <a href="#treatment-menu" aria-current="page">Treatments</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="membership.html">Membership</a>
+      <a href="gift-cards.html">Gift Cards</a>
+      <a href="index.html#first-visit-offer">Offers</a>
+    </nav><section aria-labelledby="treatment-menu">
       <h2 id="treatment-menu">Explore the treatment menu</h2>
       <div class="treatment-menu-grid">
   <article class="treatment-menu-card">
@@ -87,60 +97,102 @@
   </article>
 </div>
     </section>
-    <div id="massage"></div>
-    <section id="treatments" class="treatments">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">
-              The treatment collection
-            </div>
-            <h2>
-              Find your kind of calm.
-            </h2>
+    <section id="massage" class="treatment-listing" aria-labelledby="treatments">
+      <h2 id="treatments">Massage &amp; Enhancements</h2>
+      <p class="muted">Sample menu and starting prices. Please confirm availability and rates with the spa.</p>
+      <div class="treatment-service-grid">
+        <article id="lymphatic-massage" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Lymphatic Massage</h3>
+            <span>from <strong>$139</strong></span>
           </div>
-          <p class="muted">
-            Sample menu · customizable for your spa
-          </p>
-        </div>
-        <div class="cards">
-          <article class="card" id="signature-relaxation">
-            <img class="spa-menu-photo" src="white-lotus-massage.jpg" alt="" loading="lazy" width="1000" height="1120">
-            <h3>
-              Signature Relaxation
-            </h3>
-            <p>
-              A gentle, flowing massage for a peaceful pause and a full-body reset.
-            </p>
-            <button data-dialog="relaxation">
-              Explore ritual &nbsp; ↗
-            </button>
-          </article>
-          <article class="card" id="deep-tissue">
-            <img class="spa-menu-photo" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="" loading="lazy" width="1000" height="1120">
-            <h3>
-              Deep Tissue
-            </h3>
-            <p>
-              Focused pressure and attentive care, tailored to your comfort.
-            </p>
-            <button data-dialog="deep">
-              Explore ritual &nbsp; ↗
-            </button>
-          </article>
-          <article class="card" id="time-for-two">
-            <img class="spa-menu-photo" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=1000&amp;q=82" alt="" loading="lazy" width="1000" height="1120">
-            <h3>
-              Time for Two
-            </h3>
-            <p>
-              Share a quiet escape with side-by-side treatments and space to unwind.
-            </p>
-            <button data-dialog="couples">
-              Explore ritual &nbsp; ↗
-            </button>
-          </article>
-        </div>
-      </section>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Light pressure and rhythmic strokes offer a gentle, relaxing massage.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=lymphatic-massage" aria-label="Book Lymphatic Massage">Book →</a>
+        </article>
+        <article id="signature-relaxation" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Signature Massage</h3>
+            <span>from <strong>$119</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Long, flowing strokes ease everyday tension and encourage full-body relaxation.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=signature-relaxation" aria-label="Book Signature Massage">Book →</a>
+        </article>
+        <article id="maternity-massage" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Maternity Massage</h3>
+            <span>from <strong>$119</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 min</p>
+          <p>A gentle prenatal massage adapted to your comfort as your body changes.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=maternity-massage" aria-label="Book Maternity Massage">Book →</a>
+        </article>
+        <article id="time-for-two" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Couples Massage</h3>
+            <span>from <strong>$238</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Enjoy two Signature Massages side by side with someone you’d like to treat.</p>
+          <a class="btn treatment-book" href="tel:+12018853755" aria-label="Book Couples Massage by phone">Book by phone →</a>
+        </article>
+        <article id="deep-tissue" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Deep Tissue Therapeutic</h3>
+            <span>from <strong>$139</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Focused pressure works through tight muscles in the areas that need attention.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=deep-tissue" aria-label="Book Deep Tissue Therapeutic">Book →</a>
+        </article>
+        <article id="salt-stone-massage" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Salt Stone Massage</h3>
+            <span>from <strong>$139</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Warm Himalayan salt stones pair with soothing strokes for a calming massage.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=salt-stone-massage" aria-label="Book Salt Stone Massage">Book →</a>
+        </article>
+        <article id="sports-massage" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Sports Massage</h3>
+            <span>from <strong>$139</strong></span>
+          </div>
+          <p class="treatment-duration">60 · 80 · 100 min</p>
+          <p>Targeted massage, assisted stretching, and warm salt stones focus on muscles that work hard.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=sports-massage" aria-label="Book Sports Massage">Book →</a>
+        </article>
+        <article id="cupping-boost" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Cupping Boost</h3>
+            <span>from <strong>$20</strong></span>
+          </div>
+          <p class="treatment-duration">Massage add-on</p>
+          <p>Gentle suction cups complement a Signature, Sports, or Deep Tissue massage.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=cupping-boost" aria-label="Book Cupping Boost">Book →</a>
+        </article>
+        <article id="cbd-boost" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>CBD Full Body Boost</h3>
+            <span>from <strong>$20</strong></span>
+          </div>
+          <p class="treatment-duration">Massage add-on</p>
+          <p>CBD-infused massage products add a soothing touch to your full-body session.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=cbd-boost" aria-label="Book CBD Full Body Boost">Book →</a>
+        </article>
+        <article id="hypervolt-boost" class="treatment-service">
+          <div class="treatment-service-title">
+            <h3>Hypervolt Boost</h3>
+            <span>from <strong>$20</strong></span>
+          </div>
+          <p class="treatment-duration">Massage add-on</p>
+          <p>Targeted percussion complements your massage in areas that feel especially tight.</p>
+          <a class="btn treatment-book" href="booking.html?treatment=hypervolt-boost" aria-label="Book Hypervolt Boost">Book →</a>
+        </article>
+      </div>
+    </section>
 <section id="skin-care" aria-labelledby="skin-care-title">
       <h2 id="skin-care-title">Skin Care</h2>
       <p>Explore facials and skincare options.</p>

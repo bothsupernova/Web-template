@@ -44,6 +44,7 @@
 <section class="booking-content">
   <div class="eyebrow">Booking coming soon</div>
   <h2>Your next quiet moment.</h2>
+  <p id="booking-treatment" hidden></p>
   <p>Online booking will be available once the spa’s appointment provider is connected.</p>
   <p class="muted">This is a website preview. No appointment has been made.</p>
   <div class="actions">
@@ -83,5 +84,25 @@
     </dialog>
     <script src="script.js" defer>
     </script>
+    <script>
+    const treatmentNames = {
+        "lymphatic-massage": "Lymphatic Massage",
+        "signature-relaxation": "Signature Massage",
+        "maternity-massage": "Maternity Massage",
+        "time-for-two": "Couples Massage",
+        "deep-tissue": "Deep Tissue Therapeutic",
+        "salt-stone-massage": "Salt Stone Massage",
+        "sports-massage": "Sports Massage",
+        "cupping-boost": "Cupping Boost",
+        "cbd-boost": "CBD Full Body Boost",
+        "hypervolt-boost": "Hypervolt Boost"
+    };
+    const treatmentId = new URLSearchParams(window.location.search).get('treatment');
+    if (Object.hasOwn(treatmentNames, treatmentId)) {
+      const selection = document.querySelector('#booking-treatment');
+      selection.textContent = 'Selected treatment: ' + treatmentNames[treatmentId];
+      selection.hidden = false;
+    }
+  </script>
   </body>
 </html>

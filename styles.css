@@ -830,3 +830,52 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   header nav { background: var(--paper); }
   .menu { color: var(--olive-dark); border-color: var(--olive); }
 }
+
+.treatment-hero {
+  display: grid;
+  align-content: center;
+  min-height: clamp(450px, 68svh, 740px);
+  color: #fffaf2;
+  background: linear-gradient(90deg, rgb(22 24 17 / 88%), rgb(22 24 17 / 34%)),
+    url("white-lotus-massage.jpg") center / cover;
+}
+.treatment-hero .eyebrow { color: #f0dfbc; margin-top: 32px; }
+.treatment-hero h1 { margin: 0; }
+.treatment-intro { max-width: 52ch; border-top: 1px solid #e2c99d; padding-top: 18px; }
+.treatment-nav {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px clamp(12px, 4vw, 48px);
+  padding: 16px 6%;
+  border-bottom: 1px solid #ded7c8;
+}
+.treatment-nav a { color: var(--ink); }
+.treatment-nav a[aria-current="page"] { color: var(--olive-dark); text-decoration: underline; }
+.treatment-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(24px, 5vw, 72px);
+}
+.treatment-service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-block: 24px;
+  border-top: 1px solid #ded7c8;
+}
+.treatment-service-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+}
+.treatment-service-title h3, .treatment-service p { margin: 0; }
+.treatment-service-title span { white-space: nowrap; }
+.treatment-service p { max-width: 48ch; }
+.treatment-service .treatment-duration { color: #5b604f; margin-block: 6px; }
+.treatment-service .treatment-book { margin-top: auto; }
+.treatment-service p:last-of-type { padding-bottom: 16px; }
+@media (max-width: 680px) {
+  .treatment-service-grid { grid-template-columns: 1fr; }
+}
