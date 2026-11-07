@@ -870,3 +870,18 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 @media (max-width: 680px) {
   .treatment-service-grid { grid-template-columns: 1fr; }
 }
+
+.home-service-menu .spa-menu-photo { aspect-ratio: 1.65; }
+.home-service-menu .treatment-menu-card { display: flex; flex-direction: column; }
+.home-service-copy { display: flex; flex-direction: column; flex: 1; padding: 16px; }
+.home-service-copy h3, .home-service-copy p { margin-inline: 0; }
+.home-service-copy h3 { margin-top: 0; }
+.home-service-meta { color: var(--olive-dark); }
+.book-text-link {
+  color: var(--olive-dark);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  align-self: flex-start;
+}
+.home-service-copy .book-text-link { margin-top: auto; }
