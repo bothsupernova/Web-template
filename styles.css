@@ -747,3 +747,19 @@ header nav a[aria-current="page"] {
 }
 .gift-selection p { margin: 8px 0; }
 .gift-selection .btn { justify-self: start; }
+
+.treatment-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 28px;
+  max-width: 1200px;
+}
+@media (min-width: 900px) {
+  .treatment-menu-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.treatment-menu-placeholder {
+  background: #000;
+  aspect-ratio: 1 / 1;
+}
+.treatment-menu-card h3 { margin-block: 12px 4px; }
+.treatment-menu-card p { margin-top: 0; }
