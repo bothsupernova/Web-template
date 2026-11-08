@@ -914,3 +914,71 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 }
 .treatment-enhancement-group h3 { margin: 6px 0 12px; }
 .treatment-enhancement-group h4 { margin: 0; font-size: 1.25rem; }
+
+/* Treatment menu proportions follow the reference while using White Lotus colors. */
+.treatment-page {
+  font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+.treatment-page h1, .treatment-page h2, .treatment-page h3,
+.treatment-page h4, .treatment-service-title strong {
+  font-family: var(--spa-font);
+}
+.treatment-page .treatment-category {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: clamp(40px, 6vw, 84px) 8.4%;
+}
+.treatment-page .treatment-category-nav a {
+  font-size: 16px;
+}
+.category-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 38.6%);
+  align-items: center;
+  gap: clamp(28px, 6vw, 88px);
+  margin-bottom: clamp(32px, 5vw, 64px);
+}
+.category-intro h2 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.06;
+  margin: 16px 0 22px;
+}
+.category-intro-copy > p:not(.eyebrow) {
+  max-width: 44ch;
+  color: #55594e;
+  font-size: 17px;
+}
+.category-intro img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.category-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 26px;
+}
+.category-actions .book-text-link { align-self: center; }
+.treatment-page .treatment-service-grid { column-gap: clamp(28px, 4vw, 56px); }
+.treatment-page .treatment-service { padding-block: 25px; }
+.treatment-page .treatment-service-title { flex-wrap: wrap; }
+.treatment-page .treatment-service-title h3 { font-size: 25px; line-height: 1.12; }
+.treatment-page .treatment-service-title span,
+.treatment-page .treatment-duration { font-size: 13px; }
+.treatment-page .treatment-service-title strong { font-size: 22px; }
+.treatment-page .treatment-service > p:not(.treatment-duration) {
+  max-width: 58ch;
+  color: #55594e;
+  font-size: 15px;
+  margin-block: 5px;
+}
+.treatment-page .treatment-service > a { margin-top: auto; font-size: 14px; }
+@media (max-width: 680px) {
+  .category-intro { grid-template-columns: 1fr; }
+  .category-intro img { aspect-ratio: 4 / 3; }
+}
