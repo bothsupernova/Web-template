@@ -86,21 +86,28 @@
     </script>
     <script>
     const treatmentNames = {
-        "lymphatic-massage": "Lymphatic Massage",
-        "signature-relaxation": "Signature Massage",
-        "maternity-massage": "Maternity Massage",
-        "time-for-two": "Couples Massage",
-        "deep-tissue": "Deep Tissue Therapeutic",
-        "salt-stone-massage": "Salt Stone Massage",
-        "sports-massage": "Sports Massage",
-        "cupping-boost": "Cupping Boost",
-        "cbd-boost": "CBD Full Body Boost",
-        "hypervolt-boost": "Hypervolt Boost"
-    };
-    const treatmentId = new URLSearchParams(window.location.search).get('treatment');
+  "lotus-serenity-massage": "Lotus Serenity Massage",
+  "white-lotus-signature-massage": "White Lotus Signature Massage",
+  "deep-renewal-therapy": "Deep Renewal Therapy",
+  "royal-thai-harmony": "Royal Thai Harmony",
+  "botanical-aromatherapy-ritual": "Botanical Aromatherapy Ritual",
+  "warm-stone-serenity": "Warm Stone Serenity",
+  "white-lotus-lymphatic-drainage-massage": "White Lotus Lymphatic Drainage Massage",
+  "lotus-harmony-for-two": "Lotus Harmony for Two",
+  "lotus-foot-sanctuary": "Lotus Foot Sanctuary",
+  "head-to-toe-harmony": "Head-to-Toe Harmony",
+  "lotus-radiance-facial": "Lotus Radiance Facial",
+  "pure-lotus-hydration": "Pure Lotus Hydration",
+  "timeless-beauty-ritual": "Timeless Beauty Ritual",
+  "royal-lotus-facial": "Royal Lotus Facial",
+  "the-white-lotus-journey": "The White Lotus Journey",
+  "lotus-romance-escape": "Lotus Romance Escape"
+};
+    const selectionValue = new URLSearchParams(window.location.search).get('treatment') || '';
+    const [treatmentId, duration] = selectionValue.split(':');
     if (Object.hasOwn(treatmentNames, treatmentId)) {
       const selection = document.querySelector('#booking-treatment');
-      selection.textContent = 'Selected treatment: ' + treatmentNames[treatmentId];
+      selection.textContent = 'Selected treatment: ' + treatmentNames[treatmentId] + (['45', '60', '75', '90'].includes(duration) ? ' · ' + duration + ' min' : '');
       selection.hidden = false;
     }
   </script>
