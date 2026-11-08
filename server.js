@@ -42,8 +42,11 @@ const server = http.createServer(async (request, response) => {
   }
 
   let pathname;
+  let search;
   try {
-    pathname = new URL(request.url, 'http://localhost').pathname;
+    const url = new URL(request.url, 'http://localhost');
+    pathname = url.pathname;
+    search = url.search;
   } catch {
     response.writeHead(400);
     response.end();
@@ -55,6 +58,18 @@ const server = http.createServer(async (request, response) => {
     response.writeHead(404);
     response.end(request.method === 'HEAD' ? undefined : 'Not found');
     return;
+  }
+
+  // Redirect old bookmarks to the clean URL while keeping booking selections.
+  if (file.type.startsWith('text/html')) {
+    const canonicalPath = file.name === 'index.html'
+      ? '/'
+      : '/' + file.name.replace(/\.html$/, '');
+    if (pathname !== canonicalPath) {
+      response.writeHead(301, { Location: canonicalPath + search });
+      response.end();
+      return;
+    }
   }
 
   try {
