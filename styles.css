@@ -1060,3 +1060,17 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
     grid-row: auto;
   }
 }
+
+/* Short add-ons stay fully visible without an expansion control. */
+.treatment-page .treatment-enhancement-group .enhancement-description {
+  max-width: 48ch;
+  min-height: 3.16em;
+  margin-block: 10px 0;
+  padding-bottom: 0;
+  text-wrap: pretty;
+}
+@media (max-width: 680px) {
+  .treatment-page .treatment-enhancement-group .enhancement-description {
+    min-height: 0;
+  }
+}
