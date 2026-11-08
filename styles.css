@@ -1074,3 +1074,10 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
     min-height: 0;
   }
 }
+
+/* Homepage descriptions use the same readable sans-serif as Treatments. */
+.home p:not(.eyebrow),
+.home dd {
+  font: 400 15px/1.58 Arial, Helvetica, sans-serif;
+}
+.home .home-service-meta { font-size: 14px; }
