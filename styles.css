@@ -982,3 +982,28 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   .category-intro { grid-template-columns: 1fr; }
   .category-intro img { aspect-ratio: 4 / 3; }
 }
+
+.treatment-page .treatment-service-title h3 {
+  font: 500 clamp(23px, 2vw, 29px)/1.14 var(--spa-font);
+}
+.treatment-page .treatment-service > p:not(.treatment-duration),
+.treatment-page .service-details p {
+  font: 400 16px/1.58 Arial, Helvetica, sans-serif;
+  color: #54564f;
+  max-width: 62ch;
+}
+.treatment-page .treatment-service .treatment-duration { font-size: 14px; }
+.treatment-page .treatment-service .service-preview { padding-bottom: 0; }
+.service-details { margin-block: 6px 12px; width: 100%; }
+.service-details summary {
+  cursor: pointer;
+  color: var(--olive-dark);
+  font: 600 14px/1.6 Arial, Helvetica, sans-serif;
+  width: fit-content;
+}
+.service-details summary:hover { text-decoration: underline; }
+.service-details p { margin-block: 10px; }
+.service-details .read-less,
+.service-details[open] .read-more,
+.treatment-service:has(.service-details[open]) .service-preview { display: none; }
+.service-details[open] .read-less { display: inline; }
