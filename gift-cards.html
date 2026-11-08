@@ -40,11 +40,48 @@
 <section class="gift-intro"><p class="eyebrow">Template · Gift Cards</p><h1>Give a moment<br>of relaxation.</h1><p>Choose a massage for someone special. Collect your physical gift card at the spa.</p><a class="btn" href="#gift-menu">Choose a massage</a></section>
 <section id="gift-menu"><p class="eyebrow">Collect at the spa</p><h2>Choose their treatment</h2>
 <form action="booking.html" method="get" class="gift-selection">
-<label for="gift-treatment">Massage</label>
-<select id="gift-treatment" name="gift-treatment" required>
-<option value="">Select a massage</option>
-<option>Signature Relaxation</option><option>Deep Tissue</option><option>Time for Two</option></select>
-<label for="gift-duration">Duration</label><select id="gift-duration" name="gift-duration" required><option value="">Select duration</option><option value="60">60 minutes</option><option value="90">90 minutes</option></select>
+<label for="gift-treatment">Massage and duration</label>
+<select id="gift-treatment" name="treatment" required>
+<option value="">Choose a massage</option>
+<optgroup label="Lotus Serenity Massage">
+<option value="lotus-serenity-massage:60">Lotus Serenity Massage · 60 min — $120</option>
+<option value="lotus-serenity-massage:90">Lotus Serenity Massage · 90 min — $170</option>
+</optgroup>
+<optgroup label="White Lotus Signature Massage">
+<option value="white-lotus-signature-massage:60">White Lotus Signature Massage · 60 min — $125</option>
+<option value="white-lotus-signature-massage:90">White Lotus Signature Massage · 90 min — $180</option>
+</optgroup>
+<optgroup label="Deep Renewal Therapy">
+<option value="deep-renewal-therapy:60">Deep Renewal Therapy · 60 min — $125</option>
+<option value="deep-renewal-therapy:90">Deep Renewal Therapy · 90 min — $180</option>
+</optgroup>
+<optgroup label="Royal Thai Harmony">
+<option value="royal-thai-harmony:60">Royal Thai Harmony · 60 min — $130</option>
+<option value="royal-thai-harmony:90">Royal Thai Harmony · 90 min — $185</option>
+</optgroup>
+<optgroup label="Botanical Aromatherapy Ritual">
+<option value="botanical-aromatherapy-ritual:60">Botanical Aromatherapy Ritual · 60 min — $130</option>
+<option value="botanical-aromatherapy-ritual:90">Botanical Aromatherapy Ritual · 90 min — $185</option>
+</optgroup>
+<optgroup label="Warm Stone Serenity">
+<option value="warm-stone-serenity:60">Warm Stone Serenity · 60 min — $130</option>
+<option value="warm-stone-serenity:90">Warm Stone Serenity · 90 min — $185</option>
+</optgroup>
+<optgroup label="White Lotus Lymphatic Drainage Massage">
+<option value="white-lotus-lymphatic-drainage-massage:45">White Lotus Lymphatic Drainage Massage · 45 min — $145</option>
+<option value="white-lotus-lymphatic-drainage-massage:75">White Lotus Lymphatic Drainage Massage · 75 min — $195</option>
+</optgroup>
+<optgroup label="Lotus Harmony for Two">
+<option value="lotus-harmony-for-two:60">Lotus Harmony for Two · 60 min — $260</option>
+<option value="lotus-harmony-for-two:90">Lotus Harmony for Two · 90 min — $370</option>
+</optgroup>
+<optgroup label="Lotus Foot Sanctuary">
+<option value="lotus-foot-sanctuary:45">Lotus Foot Sanctuary · 45 min — $85</option>
+</optgroup>
+<optgroup label="Head-to-Toe Harmony">
+<option value="head-to-toe-harmony:90">Head-to-Toe Harmony · 90 min — $200</option>
+</optgroup>
+</select>
 <input type="hidden" name="collection" value="in-store">
 <p><strong>Pickup at Template Spa</strong><br>Contact the spa to confirm availability, pricing, payment, and collection time.</p>
 <p>The booking connection is coming soon. This preview lets you choose a treatment to discuss with the spa.</p>
