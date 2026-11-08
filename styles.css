@@ -1007,3 +1007,56 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .service-details[open] .read-more,
 .treatment-service:has(.service-details[open]) .service-preview { display: none; }
 .service-details[open] .read-less { display: inline; }
+
+/* The massage feature leads with a landscape image. Skincare keeps a portrait. */
+.treatment-page .treatment-category {
+  width: min(83.2%, 1440px);
+  padding-inline: 0;
+}
+.treatment-page .category-intro {
+  gap: clamp(28px, 4.4vw, 64px);
+}
+#massage .category-intro {
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+}
+#massage .category-intro img {
+  grid-column: 1;
+  grid-row: 1;
+  aspect-ratio: 4 / 3;
+}
+#massage .category-intro-copy {
+  grid-column: 2;
+  grid-row: 1;
+}
+.category-intro h2 { font-size: clamp(40px, 4vw, 57px); }
+.treatment-page .treatment-service-title h3 { font-size: clamp(22px, 1.8vw, 28px); }
+.treatment-page .treatment-service-title strong { font-size: 21px; font-weight: 500; }
+.treatment-page .treatment-service > p:not(.treatment-duration),
+.treatment-page .service-details p {
+  font: 400 15px/1.58 Arial, Helvetica, sans-serif;
+  max-width: 60ch;
+}
+.treatment-page .service-details summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+.service-details summary::-webkit-details-marker { display: none; }
+.service-details summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+.service-details[open] summary::after { transform: translateY(2px) rotate(225deg); }
+@media (max-width: 750px) {
+  .treatment-page .treatment-category { width: 88%; }
+  .treatment-page .category-intro, #massage .category-intro { grid-template-columns: 1fr; }
+  #massage .category-intro img, #massage .category-intro-copy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
