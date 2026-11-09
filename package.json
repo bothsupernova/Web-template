@@ -5,6 +5,8 @@
   "description": "Template spa website",
   "scripts": {
     "start": "node server.js",
-    "build": "node --check server.js && node --check script.js"
+    "build": "node --check server.js && node --check script.js && node --check home-motion.js",
+    "test": "node --test tests/seo.test.js"
   }
 }
+

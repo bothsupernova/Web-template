@@ -29,10 +29,14 @@ const publicFiles = new Map([
   ['/', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/index.html', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/white-lotus-massage.jpg', { name: 'white-lotus-massage.jpg', type: 'image/jpeg' }],
+  ['/sitemap.xml', { name: 'sitemap.xml', type: 'application/xml; charset=utf-8' }],
+  ['/robots.txt', { name: 'robots.txt', type: 'text/plain; charset=utf-8' }],
   ['/styles.css', { name: 'styles.css', type: 'text/css; charset=utf-8' }],
   ['/home-motion.js', { name: 'home-motion.js', type: 'text/javascript; charset=utf-8' }],
   ['/script.js', { name: 'script.js', type: 'text/javascript; charset=utf-8' }],
 ]);
+
+const unfinishedPages = new Set(['booking.html', 'gift-cards.html', 'membership.html']);
 
 const server = http.createServer(async (request, response) => {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
@@ -60,16 +64,23 @@ const server = http.createServer(async (request, response) => {
     return;
   }
 
-  // Redirect old bookmarks to the clean URL while keeping booking selections.
-  if (file.type.startsWith('text/html')) {
-    const canonicalPath = file.name === 'index.html'
-      ? '/'
-      : '/' + file.name.replace(/\.html$/, '');
-    if (pathname !== canonicalPath) {
-      response.writeHead(301, { Location: canonicalPath + search });
-      response.end();
-      return;
-    }
+  // Keep existing clean routes; pricing has moved into the treatment menu.
+  const isHtml = file.type.startsWith('text/html');
+  const canonicalPath = file.name === 'pricing.html' ? '/treatments'
+    : file.name === 'index.html' ? '/'
+    : isHtml ? '/' + file.name.replace(/\.html$/, '') : pathname;
+  const target = canonicalPath + search + (file.name === 'pricing.html' ? '#massage' : '');
+
+  // The hosting edge already enforces HTTPS. Only normalize the known www alias;
+  // never trust forwarded headers or force HTTPS on local/preview environments.
+  const hostname = (request.headers.host || '').toLowerCase().split(':')[0];
+  const isWww = hostname === 'www.whitelotusspanj.com';
+  if (isWww || pathname !== canonicalPath) {
+    response.writeHead(301, {
+      Location: isWww ? 'https://whitelotusspanj.com' + target : target,
+    });
+    response.end();
+    return;
   }
 
   try {
@@ -78,6 +89,7 @@ const server = http.createServer(async (request, response) => {
       'Content-Type': file.type,
       'Content-Length': content.length,
       'X-Content-Type-Options': 'nosniff',
+      ...(unfinishedPages.has(file.name) ? { 'X-Robots-Tag': 'noindex, follow' } : {}),
     });
     response.end(request.method === 'HEAD' ? undefined : content);
   } catch (error) {
@@ -90,5 +102,6 @@ const server = http.createServer(async (request, response) => {
 // Hosting providers supply PORT; use 3000 when running locally.
 const port = Number(process.env.PORT || 3000);
 server.listen(port, '0.0.0.0', () => {
-  console.log(`Spa website listening on port ${port}`);
+  console.log(`Spa website listening on port ${server.address().port}`);
 });
+

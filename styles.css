@@ -1081,3 +1081,8 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   font: 400 15px/1.58 Arial, Helvetica, sans-serif;
 }
 .home .home-service-meta { font-size: 14px; }
+
+
+/* Preserve visit-column typography while keeping heading levels sequential. */
+.visit-heading { font: normal 28px var(--spa-font); margin: 1em 0; }
+.location-placeholder .visit-heading { margin: 0; }
