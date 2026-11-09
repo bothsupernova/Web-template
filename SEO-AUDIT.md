@@ -27,7 +27,7 @@ Implementation prepared November 9, 2026. Live HTTP baseline was captured Novemb
 - Booking, Gift Cards and Membership: `noindex, follow` in HTML and HTTP headers, excluded from sitemap. Their limitations remain explicit; no reservation, payment or membership enrollment has been enabled.
 - Images: descriptive alt text based on their actual visual contents, asynchronous decoding, lazy loading and responsive remote image candidates. The decorative scrolling background keeps empty alt text. Existing images, layout and video behavior remain intact.
 - Server: serves SEO files with correct MIME types, redirects all Pricing aliases to Treatments, and normalizes the exact known www hostname to HTTPS non-www. HTTPS remains handled by the existing hosting edge; no forwarded-protocol redirect was introduced that could loop behind the proxy. Unknown/private files still return 404.
-- Latest owner corrections: address changed everywhere to **70 Kinderkamack Road, Emerson, NJ 07630**, including metadata, directions and JSON-LD. Phone **(201) 885-3755** added to the home hero. First-visit offer is **20% off: $96 / $136**, regular **$120 / $170**. Lotus Harmony for Two is **$250 / $360** in Treatments and the gift selection; the distinct Lotus Romance Escape package is unchanged.
+- Latest owner corrections: address changed everywhere to **70 Kinderkamack Road, Emerson, NJ 07630**, including metadata, directions and JSON-LD. Phone **(201) 885-3755** added to the home hero. First-visit offer is **save up to 20%: $100 / $136**, regular **$120 / $170**. Lotus Harmony for Two is **$250 / $360** in Treatments and the gift selection; the distinct Lotus Romance Escape package is unchanged.
 
 ## Business facts and outstanding details
 
