@@ -1086,3 +1086,59 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 /* Preserve visit-column typography while keeping heading levels sequential. */
 .visit-heading { font: normal 28px var(--spa-font); margin: 1em 0; }
 .location-placeholder .visit-heading { margin: 0; }
+
+/* Homepage chair massage: copy and landscape image on a dark editorial panel. */
+.chair-massage {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 88px);
+  padding: clamp(64px, 7vw, 112px) 8%;
+  background: #191b16;
+  color: #f5f0e6;
+}
+.home .chair-massage .eyebrow {
+  margin: 0 0 28px;
+  color: #c4ae80;
+  font: 600 12px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: 2.5px;
+}
+.chair-massage h2 {
+  margin: 0 0 26px;
+  color: #f5f0e6;
+  font: 400 clamp(42px, 4.8vw, 76px)/1.08 var(--spa-font);
+}
+.home .chair-massage .chair-massage-lead { margin: 0 0 26px; font-size: clamp(18px, 1.6vw, 23px); line-height: 1.6; }
+.home .chair-massage .chair-massage-description {
+  max-width: 56ch;
+  margin: 0 0 30px;
+  color: #c9c4b6;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.chair-massage-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.chair-massage-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  font: 600 12px/1.5 Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #b9a074;
+  color: #191b16;
+}
+.chair-massage-actions .chair-massage-call { border: 1px solid #8c8575; background: transparent; color: #f5f0e6; }
+.chair-massage-actions .btn:hover { background: #d0ba92; color: #191b16; }
+.chair-massage-actions .btn:focus-visible { outline: 3px solid #f5f0e6; outline-offset: 5px; }
+.chair-massage-media { margin: 0; min-width: 0; }
+.chair-massage-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 5px; }
+.chair-massage-media figcaption { margin-top: 16px; color: #c9c4b6; font: 400 13px/1.6 Arial, Helvetica, sans-serif; }
+@media (max-width: 800px) {
+  .chair-massage { grid-template-columns: 1fr; padding: 60px 7%; }
+  .chair-massage-copy { min-width: 0; }
+}
+@media (max-width: 420px) {
+  .chair-massage-actions { flex-direction: column; }
+  .chair-massage-actions .btn { width: 100%; box-sizing: border-box; }
+}
