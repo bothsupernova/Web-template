@@ -1089,22 +1089,35 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 
 /* Homepage chair massage: copy and landscape image in the spa’s olive and cream palette. */
 .chair-massage {
+  --chair-gold: #dfcda4;
   display: grid;
   grid-template-columns: 1.08fr 1fr;
   align-items: center;
   gap: clamp(32px, 5vw, 88px);
   padding: clamp(64px, 7vw, 112px) 8%;
-  background: var(--olive-dark);
+  background: radial-gradient(ellipse at top right, #536045 0%, var(--olive-dark) 65%);
+  border-block: 1px solid #b8a780;
   color: var(--paper);
 }
 .home .chair-massage .eyebrow {
   margin: 0 0 28px;
-  color: #e3e8d7;
+  color: var(--chair-gold);
   font: 600 12px/1.5 Arial, Helvetica, sans-serif;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.home .chair-massage .eyebrow::after {
+  content: "";
+  width: 64px;
+  height: 1px;
+  background: var(--chair-gold);
+  opacity: .6;
 }
 .chair-massage h2 {
-  margin: 0 0 26px;
+  margin: 0 0 30px;
+  letter-spacing: -.025em;
   color: var(--paper);
   font: 400 clamp(42px, 4.8vw, 76px)/1.08 var(--spa-font);
 }
@@ -1112,7 +1125,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .home .chair-massage .chair-massage-description {
   max-width: 56ch;
   margin: 0 0 30px;
-  color: #e3e8d7;
+  color: var(--chair-gold);
   font-size: 16px;
   line-height: 1.8;
 }
@@ -1128,12 +1141,19 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   background: var(--paper);
   color: var(--olive-dark);
 }
-.chair-massage-actions .chair-massage-call { border: 1px solid #bac5ac; background: transparent; color: var(--paper); }
+.chair-massage-actions .chair-massage-call { border: 1px solid #b8a780; background: transparent; color: var(--paper); }
 .chair-massage-actions .btn:hover { background: #dce4d0; color: var(--olive-dark); }
 .chair-massage-actions .btn:focus-visible { outline: 3px solid var(--paper); outline-offset: 5px; }
-.chair-massage-media { margin: 0; min-width: 0; }
-.chair-massage-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 5px; }
-.chair-massage-media figcaption { margin-top: 16px; color: #e3e8d7; font: 400 13px/1.6 Arial, Helvetica, sans-serif; }
+.chair-massage-media {
+  margin: 0;
+  min-width: 0;
+  padding: clamp(12px, 1.5vw, 22px);
+  border: 1px solid #8e9475;
+  background: rgb(255 255 255 / 3%);
+  box-shadow: 0 22px 48px rgb(20 28 15 / 16%);
+}
+.chair-massage-media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; }
+.chair-massage-media figcaption { margin-top: 16px; color: var(--chair-gold); font: 400 13px/1.6 Arial, Helvetica, sans-serif; }
 @media (max-width: 800px) {
   .chair-massage { grid-template-columns: 1fr; padding: 60px 7%; }
   .chair-massage-copy { min-width: 0; }
@@ -1141,4 +1161,19 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 @media (max-width: 420px) {
   .chair-massage-actions { flex-direction: column; }
   .chair-massage-actions .btn { width: 100%; box-sizing: border-box; }
+}
+
+/* A white purchase button gives the gift banner a clear focal point. */
+.lotus-gift-banner .btn {
+  background: #fff;
+  border: 1px solid #fff;
+  color: var(--olive-dark);
+}
+.lotus-gift-banner .btn:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+}
+.lotus-gift-banner .btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
 }
