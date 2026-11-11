@@ -28,6 +28,7 @@ const publicFiles = new Map([
 
   ['/', { name: 'index.html', type: 'text/html; charset=utf-8' }],
   ['/index.html', { name: 'index.html', type: 'text/html; charset=utf-8' }],
+  ['/thai-massage.jpg', { name: 'thai-massage.jpg', type: 'image/jpeg' }],
   ['/chair-massage.jpg', { name: 'chair-massage.jpg', type: 'image/jpeg' }],
   ['/white-lotus-massage.jpg', { name: 'white-lotus-massage.jpg', type: 'image/jpeg' }],
   ['/sitemap.xml', { name: 'sitemap.xml', type: 'application/xml; charset=utf-8' }],
@@ -105,4 +106,5 @@ const port = Number(process.env.PORT || 3000);
 server.listen(port, '0.0.0.0', () => {
   console.log(`Spa website listening on port ${server.address().port}`);
 });
+
 
