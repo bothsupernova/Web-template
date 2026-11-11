@@ -1190,8 +1190,8 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .guide-members .eyebrow, .guide-members .guide-copy > p:not(.eyebrow) {
   color: var(--olive-dark);
 }
-header .logo-image { display: block; flex-shrink: 0; background: var(--olive); border-radius: 3px; }
-.logo-image img { display: block; width: 150px; height: 100px; object-fit: contain; }
+header .logo-image { display: block; flex-shrink: 0; background: transparent; }
+.logo-image img { display: block; width: 96px; height: 64px; object-fit: contain; }
 .service-media { position: relative; aspect-ratio: 640 / 414; overflow: hidden; }
 .service-video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .journey-steps article:has(.service-media) { border-top: 0; }
@@ -1203,5 +1203,48 @@ header .logo-image { display: block; flex-shrink: 0; background: var(--olive); b
 }
 .service-video-toggle:focus-visible { outline: 3px solid white; outline-offset: 3px; }
 @media (max-width: 680px) {
-  .logo-image img { width: 114px; height: 76px; }
+  .logo-image img { width: 84px; height: 56px; }
+}
+
+/* Compact, unframed branding; botanical decoration stays at the edges. */
+header { padding-block: 8px; }
+.chair-massage, .lotus-gift-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(115deg, #9ba98b, #afbb9e 52%, #98a788);
+  color: #253824;
+  border-block: 1px solid #8b916f;
+}
+.chair-massage::before, .lotus-gift-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20320%20600%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23344b36%22%20stroke-width%3D%221.3%22%3E%3Cpath%20d%3D%22M45%20610C180%20490%2055%20425%20164%20310S260%20135%20223%20-20M123%20415C58%20371%2052%20323%2041%20260M174%20292C274%20278%20282%20220%20300%20173%22/%3E%3Cg%20transform%3D%22translate%28108%20475%29%20rotate%28-35%29%22%3E%3Cpath%20transform%3D%22rotate%280%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2845%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2890%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28135%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28180%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28225%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28270%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28315%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Ccircle%20r%3D%229%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28154%20334%29%20rotate%2830%29%22%3E%3Cpath%20transform%3D%22rotate%280%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2845%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2890%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28135%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28180%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28225%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28270%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28315%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Ccircle%20r%3D%229%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28219%20155%29%20rotate%28-20%29%22%3E%3Cpath%20transform%3D%22rotate%280%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2845%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2890%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28135%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28180%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28225%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28270%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28315%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Ccircle%20r%3D%229%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%2845%20274%29%20rotate%2820%29%22%3E%3Cpath%20transform%3D%22rotate%280%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2845%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%2890%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28135%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28180%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28225%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28270%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Cpath%20transform%3D%22rotate%28315%29%22%20d%3D%22M0%200C-34%20-16%20-39%20-59%200%20-78C39%20-59%2034%20-16%200%200ZM0%20-12V-68M-6%20-20L-13%20-54M6%20-20L13%20-54%22/%3E%3Ccircle%20r%3D%229%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%2890%20540%29%20rotate%28-50%29%22%3E%3Cpath%20d%3D%22M0%200Q-43%20-40%200%20-98Q43%20-40%200%200ZM0%200V-90M0%20-25L-18%20-48M0%20-45L-13%20-68M0%20-25L18%20-48M0%20-45L13%20-68%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28126%20390%29%20rotate%2845%29%22%3E%3Cpath%20d%3D%22M0%200Q-43%20-40%200%20-98Q43%20-40%200%200ZM0%200V-90M0%20-25L-18%20-48M0%20-45L-13%20-68M0%20-25L18%20-48M0%20-45L13%20-68%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28193%20240%29%20rotate%28-40%29%22%3E%3Cpath%20d%3D%22M0%200Q-43%20-40%200%20-98Q43%20-40%200%200ZM0%200V-90M0%20-25L-18%20-48M0%20-45L-13%20-68M0%20-25L18%20-48M0%20-45L13%20-68%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate%28249%2090%29%20rotate%2840%29%22%3E%3Cpath%20d%3D%22M0%200Q-43%20-40%200%20-98Q43%20-40%200%200ZM0%200V-90M0%20-25L-18%20-48M0%20-45L-13%20-68M0%20-25L18%20-48M0%20-45L13%20-68%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right -75px center;
+  background-size: 310px auto;
+  opacity: .15;
+}
+.lotus-gift-banner::before { transform: scaleX(-1); }
+.chair-massage { --chair-gold: #4c4129; }
+.chair-massage h2, .lotus-gift-banner h2 { color: #253824; }
+.chair-massage-media {
+  border-color: #8a805c;
+  box-shadow: 0 16px 36px rgb(32 48 28 / 12%);
+}
+.lotus-gift-banner .btn {
+  font: 600 21px/1.2 var(--spa-font);
+  letter-spacing: 1.3px;
+  padding: 17px 38px;
+  min-width: 164px;
+}
+@media (max-width: 680px) {
+  header { padding-block: 7px; }
+  .chair-massage::before, .lotus-gift-banner::before {
+    background-position: right -110px top;
+    opacity: .1;
+  }
 }
