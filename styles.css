@@ -1220,7 +1220,15 @@ header { padding-block: 8px; }
   background-size: 340px auto;
 }
 .chair-massage { --chair-gold: #4c4129; }
-.chair-massage h2, .lotus-gift-banner h2 { color: #253824; }
+.chair-massage h2 {
+    color: #253824;
+}
+.lotus-gift-banner h2 {
+    color: #253824;
+}
+.lotus-gift-banner p:last-of-type {
+    color: #4c4129;
+}
 .chair-massage-media {
   border-color: #8a805c;
   box-shadow: 0 16px 36px rgb(32 48 28 / 12%);
