@@ -1,32 +1,21 @@
-// Leave the hero photograph visible until the film has a playable frame.
-const film = document.querySelector('.hero-film');
-const toggle = document.querySelector('.film-toggle');
+// Posters remain visible when autoplay is unavailable or reduced motion is enabled.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-function playFilm() {
-  if (!film.src) film.src = film.dataset.src;
-  film.play().catch(() => { toggle.textContent = 'Play video'; });
+const film = document.querySelector('.hero-film');
+if (film) {
+  function syncHero() {
+    if (motionPreference.matches || document.hidden) {
+      film.pause();
+      return;
+    }
+    if (!film.src) film.src = film.dataset.src;
+    film.play().catch(() => {});
+  }
+  film.addEventListener('playing', () => film.classList.add('has-frame'));
+  film.addEventListener('error', () => film.classList.remove('has-frame'));
+  document.addEventListener('visibilitychange', syncHero);
+  motionPreference.addEventListener('change', syncHero);
+  syncHero();
 }
-
-film.addEventListener('playing', () => {
-  film.classList.add('has-frame');
-  toggle.textContent = 'Pause video';
-});
-film.addEventListener('pause', () => { toggle.textContent = 'Play video'; });
-film.addEventListener('error', () => {
-  film.classList.remove('has-frame');
-  toggle.hidden = true;
-});
-toggle.hidden = false;
-toggle.addEventListener('click', () => {
-  if (film.paused) playFilm();
-  else film.pause();
-});
-
-if (!motionPreference.matches) playFilm();
-motionPreference.addEventListener('change', () => {
-  if (motionPreference.matches) film.pause();
-});
 
 // Reveal each detail once as it enters view. Content is visible even without JS.
 if ('IntersectionObserver' in window) {
@@ -41,38 +30,23 @@ if ('IntersectionObserver' in window) {
     .forEach((detail) => observer.observe(detail));
 }
 
-// Each card keeps its own playback preference and only loads when visible.
-document.querySelectorAll('.service-media').forEach((media) => {
-  const video = media.querySelector('video');
-  const button = media.querySelector('button');
+
+// Silent service clips load only in view and pause in background tabs.
+document.querySelectorAll('.service-video').forEach((video) => {
   let visible = false;
-  let userPaused = false;
-  function play() {
-    if (!video.src) video.src = video.dataset.src;
-    video.play().catch(() => { button.textContent = 'Play video'; });
-  }
+  let failed = false;
   function sync() {
-    if (visible && !document.hidden && !userPaused && !motionPreference.matches) play();
-    else video.pause();
+    if (!visible || document.hidden || motionPreference.matches || failed) {
+      video.pause();
+      return;
+    }
+    if (!video.src) video.src = video.dataset.src;
+    video.play().catch(() => {});
   }
-  button.hidden = false;
-  button.addEventListener('click', () => {
-    userPaused = !video.paused;
-    if (userPaused) video.pause();
-    else play();
-  });
-  function updateButton() {
-    const action = video.paused ? 'Play' : 'Pause';
-    button.textContent = action + ' video';
-    button.setAttribute('aria-label', action + ' ' + video.getAttribute('aria-label'));
-  }
-  video.addEventListener('play', updateButton);
-  video.addEventListener('pause', updateButton);
   video.addEventListener('error', () => {
-    userPaused = true;
+    failed = true;
     video.removeAttribute('src');
     video.load();
-    button.hidden = true;
   });
   document.addEventListener('visibilitychange', sync);
   motionPreference.addEventListener('change', sync);
@@ -80,6 +54,6 @@ document.querySelectorAll('.service-media').forEach((media) => {
     new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting;
       sync();
-    }, { threshold: 0.2 }).observe(media);
+    }, { threshold: 0.2 }).observe(video);
   }
 });
