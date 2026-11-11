@@ -6,8 +6,9 @@
   --gold:#bc9465;
   --ink:#282b22;
   --paper:#f2ede2;
-  --olive: #576643;
-  --olive-dark: #3d4a31;
+  --olive: #a6b69b;
+  --sage-light: #c4cfb9;
+  --olive-dark: #34432f;
   --linen: #eee9dd;
 }
 
@@ -808,7 +809,7 @@ footer { border-top: 1px solid #ded7c8; }
 header .logo, footer .logo { color: var(--olive-dark); }
 header nav a { color: var(--ink); }
 header nav a[aria-current="page"] { color: var(--olive-dark); }
-.btn { background: var(--olive); border-color: var(--olive); color: white; }
+.btn { background: var(--olive); border-color: var(--olive); color: var(--olive-dark); }
 .btn:hover { background: var(--olive-dark); color: white; }
 .btn.outline { background: transparent; border-color: #fffaf2; color: #fffaf2; }
 .btn.outline:hover { background: var(--olive-dark); }
@@ -818,7 +819,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .hero .eyebrow, .scene-card .eyebrow, .membership .eyebrow, .gift-intro .eyebrow {
   color: #f0dfbc;
 }
-.lotus-gift-banner { background: #586448; }
+.lotus-gift-banner { background: var(--sage-light); color: var(--olive-dark); }
 .treatment-menu-card, .journey-steps article { background: var(--linen); }
 .treatment-menu-card h3, .treatment-menu-card p,
 .journey-steps article h3, .journey-steps article p, .journey-steps article .guide-link {
@@ -837,7 +838,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   min-height: clamp(450px, 68svh, 740px);
   color: #fffaf2;
   background: linear-gradient(90deg, rgb(22 24 17 / 88%), rgb(22 24 17 / 34%)),
-    url("white-lotus-massage.jpg") center / cover;
+    url("thai-massage.jpg") center / cover;
 }
 .treatment-hero .eyebrow { color: #f0dfbc; margin-top: 32px; }
 .treatment-hero h1 { margin: 0; }
@@ -1087,17 +1088,17 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .visit-heading { font: normal 28px var(--spa-font); margin: 1em 0; }
 .location-placeholder .visit-heading { margin: 0; }
 
-/* Homepage chair massage: copy and landscape image in the spa’s olive and cream palette. */
+/* Light sage surfaces use deep green type and warm bronze accents for contrast. */
 .chair-massage {
-  --chair-gold: #dfcda4;
+  --chair-gold: #615035;
   display: grid;
   grid-template-columns: 1.08fr 1fr;
   align-items: center;
   gap: clamp(32px, 5vw, 88px);
   padding: clamp(64px, 7vw, 112px) 8%;
-  background: radial-gradient(ellipse at top right, #536045 0%, var(--olive-dark) 65%);
+  background: radial-gradient(ellipse at top right, #d5ddcc 0%, var(--sage-light) 65%);
   border-block: 1px solid #b8a780;
-  color: var(--paper);
+  color: var(--olive-dark);
 }
 .home .chair-massage .eyebrow {
   margin: 0 0 28px;
@@ -1118,7 +1119,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .chair-massage h2 {
   margin: 0 0 30px;
   letter-spacing: -.025em;
-  color: var(--paper);
+  color: var(--olive-dark);
   font: 400 clamp(42px, 4.8vw, 76px)/1.08 var(--spa-font);
 }
 .home .chair-massage .chair-massage-lead { margin: 0 0 26px; font-size: clamp(18px, 1.6vw, 23px); line-height: 1.6; }
@@ -1141,7 +1142,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   background: var(--paper);
   color: var(--olive-dark);
 }
-.chair-massage-actions .chair-massage-call { border: 1px solid #b8a780; background: transparent; color: var(--paper); }
+.chair-massage-actions .chair-massage-call { border: 1px solid #b8a780; background: transparent; color: var(--olive-dark); }
 .chair-massage-actions .btn:hover { background: #dce4d0; color: var(--olive-dark); }
 .chair-massage-actions .btn:focus-visible { outline: 3px solid var(--paper); outline-offset: 5px; }
 .chair-massage-media {
@@ -1177,3 +1178,4 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   outline: 2px solid #fff;
   outline-offset: 5px;
 }
+
