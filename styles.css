@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
 
-/* Template Spa — colors and layout can be customized here. */
+/* White Lotus Day Spa — colors and layout can be customized here. */
 :root {
   --spa-font: "Cormorant Garamond", Georgia, serif;
   --gold:#bc9465;
@@ -718,12 +718,12 @@ header nav a[aria-current="page"] {
 .treatment-list { margin: 2rem 0; padding: 0; list-style: none; }
 .treatment-list li { border-top: 1px solid #c8bfaf; }
 .treatment-list a { display: flex; justify-content: space-between; padding: .8rem 0; }
-.guide-members { background: #29372e; color: #fffaf2; }
+.guide-members { background: var(--sage-light); color: var(--olive-dark); }
 .guide-members .eyebrow { color: #dfc297; }
 .guide-members .guide-copy > p:not(.eyebrow) { color: #ecebe4; }
 .guide-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; }
 .guide-pair article { border-top: 1px solid var(--gold); padding-top: 1rem; }
-.guide-book { background: #252824; color: #fffaf2; }
+.guide-book { background: var(--sage-light); color: var(--olive-dark); }
 .guide-book .actions { justify-content: center; }
 @media (max-width: 750px) {
   .journey-steps, .guide-split, .guide-pair { grid-template-columns: 1fr; }
@@ -734,7 +734,7 @@ header nav a[aria-current="page"] {
 }
 
 /* Gift cards are selected by treatment and collected in store. */
-.gift-intro { background: linear-gradient(120deg, #1c231d, #4c4939); color: #fffaf2; }
+.gift-intro { background: linear-gradient(120deg, #d5ddcc, var(--sage-light)); color: var(--olive-dark); }
 .gift-intro .eyebrow { color: #e7cba4; }
 .gift-intro p { max-width: 40ch; }
 .gift-selection { display: grid; gap: 14px; max-width: 600px; }
@@ -1179,3 +1179,29 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   outline-offset: 5px;
 }
 
+
+
+/* A single soft sage palette across supporting sections. */
+.membership, .guide-members, .guide-book, .gift-intro {
+  background: var(--sage-light);
+  color: var(--olive-dark);
+}
+.membership p, .membership .eyebrow, .gift-intro .eyebrow,
+.guide-members .eyebrow, .guide-members .guide-copy > p:not(.eyebrow) {
+  color: var(--olive-dark);
+}
+header .logo-image { display: block; flex-shrink: 0; background: var(--olive); border-radius: 3px; }
+.logo-image img { display: block; width: 150px; height: 100px; object-fit: contain; }
+.service-media { position: relative; aspect-ratio: 640 / 414; overflow: hidden; }
+.service-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.journey-steps article:has(.service-media) { border-top: 0; }
+.service-video-toggle {
+  position: absolute; right: 10px; bottom: 10px;
+  padding: 7px 12px; border: 1px solid #fff; border-radius: 20px;
+  background: #34432fe6; color: #fff; cursor: pointer;
+  font: 13px/1.4 Arial, sans-serif;
+}
+.service-video-toggle:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+@media (max-width: 680px) {
+  .logo-image img { width: 114px; height: 76px; }
+}

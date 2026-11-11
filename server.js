@@ -4,6 +4,14 @@ const path = require('node:path');
 
 // Only these public files can be served. Source and configuration stay private.
 const publicFiles = new Map([
+  ['/white-lotus-day-spa-logo.png', { name: 'white-lotus-day-spa-logo.png', type: 'image/png' }],
+  ['/white-lotus-massage-therapy.mp4', { name: 'white-lotus-massage-therapy.mp4', type: 'video/mp4' }],
+  ['/white-lotus-massage-therapy-poster.jpg', { name: 'white-lotus-massage-therapy-poster.jpg', type: 'image/jpeg' }],
+  ['/white-lotus-relaxing-back-massage.mp4', { name: 'white-lotus-relaxing-back-massage.mp4', type: 'video/mp4' }],
+  ['/white-lotus-relaxing-back-massage-poster.jpg', { name: 'white-lotus-relaxing-back-massage-poster.jpg', type: 'image/jpeg' }],
+  ['/white-lotus-facial-massage.mp4', { name: 'white-lotus-facial-massage.mp4', type: 'video/mp4' }],
+  ['/white-lotus-facial-massage-poster.jpg', { name: 'white-lotus-facial-massage-poster.jpg', type: 'image/jpeg' }],
+
   ['/our-story', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
   ['/our-story/', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
   ['/our-story.html', { name: 'our-story.html', type: 'text/html; charset=utf-8' }],
@@ -87,8 +95,26 @@ const server = http.createServer(async (request, response) => {
 
   try {
     const content = await readFile(path.join(__dirname, file.name));
+    if (file.type === 'video/mp4' && request.headers.range) {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(request.headers.range);
+      const start = match && match[1] ? Number(match[1]) : match && match[2] ? Math.max(0, content.length - Number(match[2])) : 0;
+      const end = match && match[1] && match[2] ? Math.min(Number(match[2]), content.length - 1) : content.length - 1;
+      if (!match || (!match[1] && !match[2]) || start > end || start >= content.length) {
+        response.writeHead(416, { 'Content-Range': 'bytes */' + content.length });
+        response.end();
+        return;
+      }
+      response.writeHead(206, {
+        'Content-Type': file.type, 'Accept-Ranges': 'bytes',
+        'Content-Range': 'bytes ' + start + '-' + end + '/' + content.length,
+        'Content-Length': end - start + 1,
+      });
+      response.end(request.method === 'HEAD' ? undefined : content.subarray(start, end + 1));
+      return;
+    }
     response.writeHead(200, {
       'Content-Type': file.type,
+      ...(file.type === 'video/mp4' ? { 'Accept-Ranges': 'bytes' } : {}),
       'Content-Length': content.length,
       'X-Content-Type-Options': 'nosniff',
       ...(unfinishedPages.has(file.name) ? { 'X-Robots-Tag': 'noindex, follow' } : {}),
