@@ -1273,7 +1273,13 @@ a.booking-action,
   height: 56px;
   margin: 0 auto 24px;
   background: url('/white-lotus-day-spa-logo.png') center top / 140px auto no-repeat;
-  filter: grayscale(1) sepia(.4) hue-rotate(40deg) saturate(.8) brightness(.88);
+  /* Preserve the sage petals; add a fine champagne edge and soft relief. */
+  filter: grayscale(1) sepia(.4) hue-rotate(40deg) saturate(.8)
+    brightness(.94) contrast(1.08)
+    drop-shadow(-.6px -.6px 0 #f4e4b9)
+    drop-shadow(.6px .7px 0 #ad8b4e)
+    drop-shadow(0 2px 2px rgb(31 42 28 / 28%))
+    drop-shadow(0 0 3px rgb(238 215 159 / 16%));
 
 }
 @media (max-width: 680px) {
