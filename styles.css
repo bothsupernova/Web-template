@@ -1180,7 +1180,15 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
 .guide-members .eyebrow, .guide-members .guide-copy > p:not(.eyebrow) {
   color: var(--olive-dark);
 }
-header .logo-image { display: block; flex-shrink: 0; background: transparent; }
+header .logo-image {
+  display: block;
+  flex-shrink: 0;
+  background-color: #87977b;
+  -webkit-mask: url('/white-lotus-day-spa-logo.png') center bottom / 150px 100px no-repeat;
+  mask: url('/white-lotus-day-spa-logo.png') center bottom / 150px 100px no-repeat;
+}
+/* Keep the original accessible image and dimensions beneath the sage silhouette. */
+header .logo-image img { opacity: 0; }
 .logo-image img { display: block; width: 96px; height: 64px; object-fit: contain; }
 .service-media { position: relative; aspect-ratio: 640 / 414; overflow: hidden; }
 .service-video { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -1254,4 +1262,22 @@ a.booking-action,
 }
 @media (max-width: 680px) {
   header .logo-image img { width: 84px; height: 56px; max-width: 84px; }
+}
+
+/* Reuse separate regions of the original logo without changing the artwork. */
+header .logo-image { width: 150px; height: 39px; }
+header .logo-image img { width: 150px; height: 39px; max-width: 150px; }
+.motion-hero h1 { width: fit-content; max-width: 100%; }
+.motion-hero h1::before {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 56px;
+  margin: 0 auto 24px;
+  background-color: #a5b498;
+  -webkit-mask: url('/white-lotus-day-spa-logo.png') center top / 140px auto no-repeat;
+  mask: url('/white-lotus-day-spa-logo.png') center top / 140px auto no-repeat;
+}
+@media (max-width: 680px) {
+  .motion-hero h1::before { margin-bottom: 18px; }
 }
