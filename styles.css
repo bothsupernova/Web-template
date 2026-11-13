@@ -639,7 +639,7 @@ header nav a[aria-current="page"] {
   padding: 10px 6px;
   border: 1px solid rgb(227 201 167 / 40%);
   border-radius: 10px;
-  background: rgb(109 85 54 / 86%);
+  background: rgb(109 85 54 / 55%);
 }
 .offer-rate strong { font: normal clamp(25px, 3vw, 42px)/1.08 var(--spa-font); }
 .offer-rate span { font-size: clamp(14px, 1.25vw, 17px); }
