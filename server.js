@@ -39,6 +39,7 @@ const publicFiles = new Map([
   ['/thai-massage.jpg', { name: 'thai-massage.jpg', type: 'image/jpeg' }],
   ['/chair-massage.jpg', { name: 'chair-massage.jpg', type: 'image/jpeg' }],
   ['/white-lotus-massage.jpg', { name: 'white-lotus-massage.jpg', type: 'image/jpeg' }],
+  ['/assets/spa-7365407.jpg', { name: 'assets/spa-7365407.jpg', type: 'image/jpeg' }],
   ['/sitemap.xml', { name: 'sitemap.xml', type: 'application/xml; charset=utf-8' }],
   ['/robots.txt', { name: 'robots.txt', type: 'text/plain; charset=utf-8' }],
   ['/styles.css', { name: 'styles.css', type: 'text/css; charset=utf-8' }],
