@@ -1385,8 +1385,22 @@ header .logo-wordmark small { margin-top: 5px; font: 500 9px/1.2 Arial, sans-ser
   color: #515b4b;
 }
 .story-page #story p + p { margin-top: 24px; }
-.story-page #story p a { text-decoration: underline; text-underline-offset: 4px; }
-.story-page #story .rule { background: #a9b59c; }
+.story-page #story p a { text-decoration: none; }
+.story-page #story p a:hover,
+.story-page #story p a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.story-page .story-welcome-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+.story-page #story > div:last-child > .eyebrow {
+  display: block;
+  margin-top: 32px;
+}
 .story-page #story .eyebrow { font-size: 12px; letter-spacing: .22em; }
 @media (max-width: 760px) {
   .story-page #story { grid-template-columns: 1fr; }
