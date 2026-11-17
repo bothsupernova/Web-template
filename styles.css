@@ -1343,3 +1343,53 @@ header .logo-wordmark small { margin-top: 5px; font: 500 9px/1.2 Arial, sans-ser
   .gift-intro-luxury h1 { font-size: clamp(42px, 9vw, 64px); }
   .gift-intro-art { max-width: 420px; }
 }
+
+/* Our Story: sage ribbon accents and a quiet editorial layout. */
+.story-page .page-heading {
+  position: relative;
+  padding-block: clamp(48px, 6vw, 88px);
+  border-bottom: 1px solid #b7bea8;
+  background: linear-gradient(100deg, #e3e7d9, #f2ede2 72%);
+}
+.story-page .page-heading::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: clamp(10px, 2vw, 28px);
+  background: #8e9f80;
+  border-right: 3px solid #c5b58c;
+}
+.story-page .page-heading h1 { margin-bottom: 0; }
+.story-page #story {
+  align-items: start;
+  gap: clamp(40px, 7vw, 110px);
+  padding-block: clamp(56px, 7vw, 100px);
+}
+.story-page #story > div:first-child {
+  border-top: 5px solid #8e9f80;
+  padding-top: 28px;
+}
+.story-page #story h2 {
+  font-size: clamp(36px, 3.6vw, 56px);
+  line-height: 1.18;
+  margin-bottom: 0;
+}
+.story-page #story > div:last-child {
+  border-left: 1px solid #a9b59c;
+  padding-left: clamp(24px, 3vw, 48px);
+}
+.story-page #story p {
+  max-width: 580px;
+  margin-top: 0;
+  font: 400 18px/1.85 Arial, Helvetica, sans-serif;
+  color: #515b4b;
+}
+.story-page #story p + p { margin-top: 24px; }
+.story-page #story p a { text-decoration: underline; text-underline-offset: 4px; }
+.story-page #story .rule { background: #a9b59c; }
+.story-page #story .eyebrow { font-size: 12px; letter-spacing: .22em; }
+@media (max-width: 760px) {
+  .story-page #story { grid-template-columns: 1fr; }
+  .story-page #story > div:last-child { padding-left: 22px; }
+  .story-page #story p { font-size: 16px; }
+}
