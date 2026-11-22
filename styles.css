@@ -1400,14 +1400,19 @@ header .logo-wordmark small { margin-top: 5px; font: 500 9px/1.2 Arial, sans-ser
   .story-page #story p { font-size: 16px; }
 }
 
-/* Botanical decoration stays outside the layout flow. */
-#massage .category-intro { position: relative; }
+/* Keep the botanical artwork beside the Massage title. */
+#massage .massage-heading-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  margin: 16px 0 22px;
+}
+#massage .massage-heading-row h2 { margin: 0; }
 #massage .category-intro-copy .massage-botanical {
-  position: absolute;
-  top: -24px;
-  right: -18px;
   display: block;
-  width: clamp(80px, 8vw, 115px);
+  flex: 0 0 auto;
+  width: clamp(100px, 11vw, 150px);
+  max-width: 38%;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
@@ -1416,10 +1421,5 @@ header .logo-wordmark small { margin-top: 5px; font: 500 9px/1.2 Arial, sans-ser
   pointer-events: none;
 }
 @media (max-width: 750px) {
-  #massage .category-intro-copy { position: relative; }
-  #massage .category-intro-copy .massage-botanical {
-    top: -24px;
-    right: 0;
-    width: 64px;
-  }
+  #massage .category-intro-copy .massage-botanical { width: 100px; }
 }
