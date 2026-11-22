@@ -1516,3 +1516,34 @@ footer.site-footer {
 }
 
 .site-footer .footer-social-icon { display: block; flex: 0 0 20px; width: 20px; height: 20px; }
+
+/* Visit page: soft interior backdrop and a calm, translucent reading surface. */
+.visit-page main {
+  padding: clamp(32px, 5vw, 72px) 7%;
+  background: linear-gradient(rgba(242, 237, 226, .12), rgba(242, 237, 226, .12)), url('/assets/white-lotus-visit-spa-background.jpg') center / cover no-repeat;
+}
+.visit-page .page-heading,
+.visit-page #visit {
+  width: 100%;
+  margin: 0;
+  padding: clamp(28px, 4vw, 60px);
+  background: rgba(247, 244, 235, .85);
+}
+.visit-page .page-heading { padding-bottom: 8px; }
+.visit-page .page-heading h1 { margin-bottom: 18px; }
+.visit-page #visit .muted { color: #50594b; }
+.visit-page #visit a { overflow-wrap: anywhere; }
+.visit-page .visit-grid { gap: clamp(24px, 3vw, 44px); }
+.visit-page .visit-grid > div { min-width: 0; }
+.visit-page .visit-grid > div + div { padding-left: clamp(20px, 2.5vw, 36px); }
+.visit-page .location-placeholder { background: rgba(242, 237, 226, .55); }
+@media (max-width: 1000px) {
+  .visit-page .visit-grid { grid-template-columns: 1fr; }
+  .visit-page .visit-grid > div + div { border-left: 0; border-top: 1px solid #d5d8ca; padding: 24px 0 0; }
+}
+@media (max-width: 600px) {
+  .visit-page main { padding: 28px 5%; background-position: 60% center; }
+  .visit-page .page-heading, .visit-page #visit { padding: 24px 20px; background-color: rgba(247, 244, 235, .9); }
+  .visit-page .page-heading { padding-bottom: 0; }
+  .visit-page .location-placeholder { padding: 24px 16px; }
+}
