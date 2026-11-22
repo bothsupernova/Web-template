@@ -1469,3 +1469,48 @@ header .logo-wordmark small { margin-top: 5px; font: 500 9px/1.2 Arial, sans-ser
   .home .lotus-inspired-banner h2 { font-size: 28px; letter-spacing: .16em; text-indent: .16em; }
   .home .lotus-inspired-banner > img { object-position: 25% center; }
 }
+
+/* Shared contact footer across all public pages. */
+footer.site-footer {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.45fr .75fr;
+  align-items: start;
+  gap: 32px;
+  padding: 52px 8% 24px;
+  font: 400 16px/1.65 Arial, Helvetica, sans-serif;
+  color: var(--olive-dark);
+}
+.site-footer .logo { font-family: var(--spa-font); font-size: 32px; line-height: 1.15; }
+.site-footer .logo small { margin-top: 8px; font-size: 11px; letter-spacing: .35em; }
+.site-footer .footer-label { margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.site-footer address { font-style: normal; }
+.site-footer .footer-social { display: block; }
+.site-footer .footer-social a { color: var(--olive-dark); font-size: 16px; }
+.site-footer .footer-contact a, .site-footer .footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-footer a:focus-visible { outline: 2px solid var(--olive-dark); outline-offset: 4px; }
+.site-footer .footer-copyright {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid #ded7c8;
+  font-size: 13px;
+  color: #55594e;
+}
+@media (max-width: 1100px) {
+  footer.site-footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  footer.site-footer { grid-template-columns: minmax(0, 1fr); gap: 26px; padding: 36px 6% 24px; font-size: 16px; }
+  .site-footer .footer-label { margin-bottom: 6px; }
+  .site-footer .footer-copyright { font-size: 12px; }
+}
