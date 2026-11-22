@@ -4,6 +4,7 @@ const path = require('node:path');
 
 // Only these public files can be served. Source and configuration stay private.
 const publicFiles = new Map([
+  ['/assets/white-lotus-bird-botanical.png', { name: 'assets/white-lotus-bird-botanical.png', type: 'image/png' }],
   ['/white-lotus-day-spa-logo.png', { name: 'white-lotus-day-spa-logo.png', type: 'image/png' }],
   ['/white-lotus-massage-therapy.mp4', { name: 'white-lotus-massage-therapy.mp4', type: 'video/mp4' }],
   ['/white-lotus-massage-therapy-poster.jpg', { name: 'white-lotus-massage-therapy-poster.jpg', type: 'image/jpeg' }],
