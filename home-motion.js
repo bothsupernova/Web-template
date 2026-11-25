@@ -29,31 +29,3 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.scene-card')
     .forEach((detail) => observer.observe(detail));
 }
-
-
-// Silent service clips load only in view and pause in background tabs.
-document.querySelectorAll('.service-video').forEach((video) => {
-  let visible = false;
-  let failed = false;
-  function sync() {
-    if (!visible || document.hidden || motionPreference.matches || failed) {
-      video.pause();
-      return;
-    }
-    if (!video.src) video.src = video.dataset.src;
-    video.play().catch(() => {});
-  }
-  video.addEventListener('error', () => {
-    failed = true;
-    video.removeAttribute('src');
-    video.load();
-  });
-  document.addEventListener('visibilitychange', sync);
-  motionPreference.addEventListener('change', sync);
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      sync();
-    }, { threshold: 0.2 }).observe(video);
-  }
-});

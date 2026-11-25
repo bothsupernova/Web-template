@@ -1181,7 +1181,7 @@ header nav a[aria-current="page"] { color: var(--olive-dark); }
   color: var(--olive-dark);
 }
 .service-media { position: relative; aspect-ratio: 640 / 414; overflow: hidden; }
-.service-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.service-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
 .journey-steps article:has(.service-media) { border-top: 0; }
 
 
