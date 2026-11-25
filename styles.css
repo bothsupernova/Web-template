@@ -1574,3 +1574,15 @@ footer.site-footer {
 .story-page .page-heading::before { display: none; }
 .story-page .page-heading h1, .story-page .page-heading a { color: #fffaf1; text-shadow: 0 2px 12px rgba(0,0,0,.3); }
 @media (max-width: 600px) { .story-page .page-heading { background-position: 65% center; } }
+
+#skin-care .facial-menu-intro { margin: 40px 0 22px; max-width: 780px; }
+#skin-care .facial-menu-intro h3, #waxing h3 { font-size: clamp(28px, 3vw, 38px); font-weight: 400; margin-bottom: 16px; }
+#skin-care .facial-menu-intro p, #waxing > p { font: 400 16px/1.7 Arial, sans-serif; color: #55594e; }
+#skin-care .facial-note { margin-top: 12px; }
+#skin-care .waxing-menu { padding: 40px 0 0; }
+.waxing-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+.waxing-groups h4 { font-size: 26px; font-weight: 500; margin: 24px 0 16px; }
+.waxing-groups dl { margin: 0; font: 400 16px/1.5 Arial, sans-serif; }
+.waxing-groups dl > div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #ded7c8; }
+.waxing-groups dd { margin: 0; white-space: nowrap; }
+@media (max-width: 900px) { .waxing-groups { grid-template-columns: 1fr; gap: 16px; } }
