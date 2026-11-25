@@ -4,6 +4,7 @@ const path = require('node:path');
 
 // Only these public files can be served. Source and configuration stay private.
 const publicFiles = new Map([
+  ['/assets/white-lotus-moonlit-pond.jpg', { name: 'assets/white-lotus-moonlit-pond.jpg', type: 'image/jpeg' }],
   ['/assets/white-lotus-visit-spa-background.jpg', { name: 'assets/white-lotus-visit-spa-background.jpg', type: 'image/jpeg' }],
   ['/assets/white-lotus-inspired-spa-banner.jpg', { name: 'assets/white-lotus-inspired-spa-banner.jpg', type: 'image/jpeg' }],
   ['/assets/white-lotus-bird-botanical.png', { name: 'assets/white-lotus-bird-botanical.png', type: 'image/png' }],
@@ -67,6 +68,13 @@ const server = http.createServer(async (request, response) => {
     search = url.search;
   } catch {
     response.writeHead(400);
+    response.end();
+    return;
+  }
+
+  // Keep old booking URLs and shared treatment links working.
+  if (['/booking', '/booking/', '/booking.html'].includes(pathname)) {
+    response.writeHead(302, { Location: 'https://www.vagaro.com/whitelotusdayspa3/services' });
     response.end();
     return;
   }
