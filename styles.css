@@ -1631,16 +1631,17 @@ footer.site-footer {
 }
 
 /* Supplied winter lotus artwork anchors both membership introductions. */
+.membership-page .member-intro, .home-member-feature {
+  background: linear-gradient(rgba(249, 247, 239, .55), rgba(249, 247, 239, .55)), url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
+}
 .membership-page .member-intro {
   width: 100%;
   max-width: none;
   padding: clamp(36px, 6vw, 80px) 7% clamp(44px, 6vw, 80px);
   margin-bottom: 36px;
-  background: linear-gradient(rgba(249, 247, 239, .74), rgba(249, 247, 239, .82)), url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
 }
 .home-member-feature {
   padding: clamp(32px, 5vw, 72px) 7%;
-  background: url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
   color: var(--olive-dark);
 }
 .home-member-panel { max-width: 780px; padding: clamp(24px, 3.4vw, 48px); background: rgba(249, 247, 239, .93); }
