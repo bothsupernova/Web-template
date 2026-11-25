@@ -1,9 +1,5 @@
 // Replace these preview messages when booking and payments are connected.
 const previewMessages = {
-  booking: {
-    title: 'Your moment is coming.',
-    description: 'Online booking is not connected yet. No appointment has been made.',
-  },
   relaxation: {
     title: 'Signature Relaxation',
     description: 'A sample 60-minute massage with gentle, flowing movements. Final services and prices will be confirmed by the spa.',
@@ -69,4 +65,5 @@ mainNavigation.querySelectorAll('a, button').forEach((link) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setMenuOpen(false);
 });
+
 

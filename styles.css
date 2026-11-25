@@ -1555,3 +1555,22 @@ footer.site-footer {
   .visit-page .page-heading { padding-bottom: 0; }
   .visit-page .location-placeholder { padding: 24px 16px; }
 }
+
+.hero .hero-contact-row { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 28px; margin-block: 24px; }
+.hero .hero-contact-row .hero-address { margin: 0; }
+.hero .hero-social { display: flex; align-items: center; gap: 10px; }
+.hero .hero-social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: #fffaf1; border: 1px solid rgba(255,250,241,.5); border-radius: 50%; text-decoration: none; }
+.hero .hero-social a:hover { background: rgba(166,182,155,.25); }
+.hero .hero-social a:focus-visible { outline: 2px solid #fffaf1; outline-offset: 4px; }
+.hero .hero-social-icon { width: 22px; height: 22px; flex: none; }
+@media (max-width: 600px) { .hero .hero-contact-row { gap: 14px; } }
+
+/* Moonlit white lotus field for the Our Story heading. */
+.story-page .page-heading {
+  background: linear-gradient(90deg, rgba(5,20,17,.45), rgba(5,20,17,.06)), url('/assets/white-lotus-moonlit-pond.jpg') center / cover no-repeat;
+  color: #f2ede2;
+  border-bottom: 0;
+}
+.story-page .page-heading::before { display: none; }
+.story-page .page-heading h1, .story-page .page-heading a { color: #fffaf1; text-shadow: 0 2px 12px rgba(0,0,0,.3); }
+@media (max-width: 600px) { .story-page .page-heading { background-position: 65% center; } }
