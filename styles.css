@@ -1578,3 +1578,12 @@ footer.site-footer {
 .waxing-groups dl > div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid #ded7c8; }
 .waxing-groups dd { margin: 0; white-space: nowrap; }
 @media (max-width: 900px) { .waxing-groups { grid-template-columns: 1fr; gap: 16px; } }
+
+/* Lists in the prenatal and medical massage descriptions. */
+.treatment-page .massage-service-notes {
+  margin: 10px 0 16px;
+  padding-left: 1.25em;
+  color: #54564f;
+  font: 400 15px/1.58 Arial, Helvetica, sans-serif;
+}
+.massage-service-notes li + li { margin-top: 6px; }
