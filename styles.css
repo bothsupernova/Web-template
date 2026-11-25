@@ -1624,7 +1624,7 @@ footer.site-footer {
 
 /* Supplied winter lotus artwork anchors both membership introductions. */
 .membership-page .member-intro, .home-member-feature {
-  background: linear-gradient(rgba(249, 247, 239, .55), rgba(249, 247, 239, .55)), url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(249, 247, 239, .40), rgba(249, 247, 239, .40)), url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
 }
 .membership-page .member-intro {
   width: 100%;
