@@ -1629,3 +1629,32 @@ footer.site-footer {
   .membership-page > section { width: 88%; }
   .membership-page .member-enhancements { padding-block: 36px; }
 }
+
+/* Supplied winter lotus artwork anchors both membership introductions. */
+.membership-page .member-intro {
+  width: 100%;
+  max-width: none;
+  padding: clamp(36px, 6vw, 80px) 7% clamp(44px, 6vw, 80px);
+  margin-bottom: 36px;
+  background: linear-gradient(rgba(249, 247, 239, .74), rgba(249, 247, 239, .82)), url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
+}
+.home-member-feature {
+  padding: clamp(32px, 5vw, 72px) 7%;
+  background: url('/assets/white-lotus-winter-membership.jpg') center / cover no-repeat;
+  color: var(--olive-dark);
+}
+.home-member-panel { max-width: 780px; padding: clamp(24px, 3.4vw, 48px); background: rgba(249, 247, 239, .93); }
+.home-member-panel h2 { font: 400 clamp(38px, 4.5vw, 64px)/1.05 var(--spa-font); margin: 0 0 20px; }
+.home-member-panel > p { font: 400 16px/1.7 Arial, Helvetica, sans-serif; color: #46523f; margin: 0 0 20px; }
+.home-member-panel .home-member-tagline { font: 500 clamp(24px, 2.4vw, 30px)/1.2 var(--spa-font); }
+.home-member-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 28px 0; }
+.home-member-options dt { font: 500 27px/1.2 var(--spa-font); margin-bottom: 10px; }
+.home-member-options dd { margin: 0; font: 400 16px/1.6 Arial, Helvetica, sans-serif; }
+.home-member-options small { display: block; font-size: 14px; margin-top: 4px; }
+.home-member-panel .btn { font: 600 18px/1.4 var(--spa-font); letter-spacing: .04em; min-height: 48px; }
+@media (max-width: 600px) {
+  .home-member-options { grid-template-columns: 1fr; gap: 18px; }
+  .home-member-feature { background-position: 65% center; padding-inline: 6%; }
+  .membership-page .member-intro { background-position: 65% center; }
+  .home-member-panel .btn { width: 100%; text-align: center; }
+}
