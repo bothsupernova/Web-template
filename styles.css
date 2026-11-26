@@ -1651,3 +1651,16 @@ footer.site-footer {
   .membership-page .member-intro { background-position: 65% center; }
   .home-member-panel .btn { width: 100%; text-align: center; }
 }
+
+/* Interactive map and a directions link remain usable at every screen width. */
+.visit-page .visit-map { padding: 0; margin-top: 48px; background: var(--paper); }
+.visit-map-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(22px, 3vw, 40px); }
+.visit-map-heading h2 { font: 500 clamp(30px, 3vw, 42px)/1.15 var(--spa-font); margin: 8px 0 12px; }
+.visit-map-heading p { margin: 0; }
+.visit-map-heading > div > p:last-child { font: 400 16px/1.6 Arial, Helvetica, sans-serif; color: #545d50; }
+.visit-map-heading .btn { flex-shrink: 0; font-size: 17px; letter-spacing: .04em; min-height: 48px; }
+.visit-map iframe { display: block; border: 0; width: 100%; height: clamp(320px, 40vw, 500px); }
+@media (max-width: 650px) {
+  .visit-map-heading { flex-direction: column; align-items: flex-start; }
+  .visit-map-heading .btn { text-align: center; width: 100%; }
+}
