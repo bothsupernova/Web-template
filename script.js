@@ -1,3 +1,34 @@
+(() => {
+// Keep mobile navigation visibility and its accessible state in sync.
+const menuButton = document.querySelector('header .menu');
+const mainNavigation = document.querySelector('header nav');
+
+if (menuButton && mainNavigation) {
+menuButton.setAttribute('aria-controls', 'main-navigation');
+mainNavigation.id = 'main-navigation';
+
+function setMenuOpen(isOpen) {
+  mainNavigation.classList.toggle('open', isOpen);
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+}
+
+menuButton.addEventListener('click', () => {
+  setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+});
+
+mainNavigation.querySelectorAll('a, button').forEach((link) => {
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
+});
+
+
+
+}
+})();
+
 // Replace these preview messages when booking and payments are connected.
 const previewMessages = {
   relaxation: {
@@ -44,26 +75,4 @@ document.querySelectorAll('[data-dialog]').forEach((button) => {
 document.querySelectorAll('.close, #done').forEach((button) => {
   button.addEventListener('click', () => previewDialog.close());
 });
-
-// Keep mobile navigation visibility and its accessible state in sync.
-const menuButton = document.querySelector('.menu');
-const mainNavigation = document.querySelector('header nav');
-
-function setMenuOpen(isOpen) {
-  mainNavigation.classList.toggle('open', isOpen);
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-}
-
-menuButton.addEventListener('click', () => {
-  setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
-});
-
-mainNavigation.querySelectorAll('a, button').forEach((link) => {
-  link.addEventListener('click', () => setMenuOpen(false));
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') setMenuOpen(false);
-});
-
 

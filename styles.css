@@ -1664,3 +1664,10 @@ footer.site-footer {
   .visit-map-heading { flex-direction: column; align-items: flex-start; }
   .visit-map-heading .btn { text-align: center; width: 100%; }
 }
+
+/* Anchor mobile navigation to the header, above the sticky homepage video. */
+body > header { position: relative; z-index: 20; }
+@media (max-width: 750px) {
+  body > header nav { top: 100%; max-height: calc(100svh - 80px); overflow-y: auto; }
+  body > header .menu { min-width: 64px; min-height: 44px; touch-action: manipulation; }
+}
